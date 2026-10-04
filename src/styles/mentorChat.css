@@ -1,0 +1,644 @@
+* {
+   box-sizing: border-box;
+}
+
+.mentor-chat-page {
+   min-height: 100vh;
+   background: #f6f8fb;
+   color: #111827;
+   font-family:
+       Inter,
+       system-ui,
+       -apple-system,
+       BlinkMacSystemFont,
+       "Segoe UI",
+       sans-serif;
+}
+
+
+/* =========================================
+  LAYOUT
+========================================= */
+
+.mentor-chat-layout {
+   display: grid;
+
+   grid-template-columns:
+       300px
+       minmax(500px, 1fr)
+       320px;
+
+   gap: 16px;
+
+   height: calc(100vh - 95px);
+
+   padding:
+       20px 42px 24px;
+
+   max-width: 1700px;
+
+   margin: auto;
+}
+
+
+/* =========================================
+  CARDS
+========================================= */
+
+.mentor-chat-sidebar,
+.mentor-chat-center,
+.mentor-student-info-panel > div {
+   background: #ffffff;
+
+   border: 1px solid #e8ebf0;
+
+   border-radius: 18px;
+
+   box-shadow:
+       0 8px 30px rgba(
+           15,
+           23,
+           42,
+           0.035
+       );
+}
+
+
+/* =========================================
+  SIDEBAR
+========================================= */
+
+.mentor-chat-sidebar {
+   min-height: 0;
+
+   overflow: hidden;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.mentor-sidebar-header {
+   padding: 22px;
+   border-bottom: 1px solid #edf0f4;
+}
+
+.mentor-sidebar-header h2 {
+   margin: 0;
+
+   font-size: 20px;
+   font-weight: 800;
+}
+
+.mentor-sidebar-header span {
+   display: block;
+
+   margin-top: 4px;
+
+   color: #98a2b3;
+
+   font-size: 11px;
+}
+
+.mentor-sidebar-search {
+   margin: 15px;
+
+   height: 42px;
+
+   display: flex;
+   align-items: center;
+
+   gap: 8px;
+
+   padding: 0 12px;
+
+   border: 1px solid #e6e9ef;
+   border-radius: 11px;
+
+   background: #f8fafc;
+}
+
+.mentor-sidebar-search span {
+   color: #94a3b8;
+}
+
+.mentor-sidebar-search input {
+   width: 100%;
+
+   border: 0;
+   outline: 0;
+
+   background: transparent;
+
+   font-size: 12px;
+}
+
+.mentor-sidebar-list {
+   flex: 1;
+
+   min-height: 0;
+
+   overflow-y: auto;
+}
+
+
+/* =========================================
+  CONVERSATION
+========================================= */
+
+.mentor-conversation {
+   display: flex;
+
+   gap: 10px;
+
+   padding: 14px 15px;
+
+   cursor: pointer;
+
+   border-bottom: 1px solid #f1f3f6;
+}
+
+.mentor-conversation:hover {
+   background: #f8fafc;
+}
+
+.mentor-conversation.active {
+   background: #f4f8ff;
+
+   border-left: 3px solid #2563eb;
+}
+
+
+/* =========================================
+  SIDE AVATAR
+========================================= */
+
+.mentor-side-avatar {
+   position: relative;
+
+   width: 44px;
+   height: 44px;
+
+   flex-shrink: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   background: #dce6ff;
+   color: #1e3a8a;
+
+   font-weight: 800;
+
+   overflow: visible;
+}
+
+.mentor-side-avatar img {
+   width: 100%;
+   height: 100%;
+
+   object-fit: cover;
+
+   border-radius: 50%;
+}
+
+.mentor-side-avatar > span {
+   position: absolute;
+
+   right: 0;
+   bottom: 1px;
+
+   width: 10px;
+   height: 10px;
+
+   border: 2px solid white;
+   border-radius: 50%;
+
+   background: #22c55e;
+}
+
+
+/* =========================================
+  SIDE CONTENT
+========================================= */
+
+.mentor-side-content {
+   min-width: 0;
+   flex: 1;
+}
+
+.mentor-side-top {
+   display: flex;
+
+   align-items: center;
+   justify-content: space-between;
+
+   gap: 6px;
+}
+
+.mentor-side-top strong {
+   overflow: hidden;
+
+   white-space: nowrap;
+   text-overflow: ellipsis;
+
+   font-size: 12px;
+}
+
+.mentor-side-top p {
+   margin: 4px 0 0;
+
+   color: #64748b;
+
+   font-size: 10px;
+
+   white-space: nowrap;
+
+   overflow: hidden;
+
+   text-overflow: ellipsis;
+}
+
+.mentor-side-unread {
+   min-width: 20px;
+   height: 20px;
+
+   padding: 0 5px;
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 999px;
+
+   background: #2563eb;
+
+   color: white;
+
+   font-size: 9px;
+   font-weight: 800;
+}
+
+
+/* =========================================
+  CENTER
+========================================= */
+
+.mentor-chat-center {
+   min-height: 0;
+
+   display: flex;
+   flex-direction: column;
+
+   overflow: hidden;
+}
+
+
+/* =========================================
+  HEADER
+========================================= */
+
+.mentor-conversation-header {
+   height: 82px;
+
+   padding: 0 20px;
+
+   display: flex;
+   align-items: center;
+
+   border-bottom: 1px solid #edf0f4;
+}
+
+.mentor-back-btn {
+   width: 36px;
+   height: 36px;
+
+   margin-right: 10px;
+
+   border: 0;
+   border-radius: 10px;
+
+   background: #f8fafc;
+
+   font-size: 19px;
+
+   cursor: pointer;
+}
+
+.mentor-student-header-avatar {
+   position: relative;
+
+   width: 46px;
+   height: 46px;
+
+   flex-shrink: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   background: #dce6ff;
+   color: #1e3a8a;
+
+   font-weight: 800;
+}
+
+.mentor-student-header-avatar img {
+   width: 100%;
+   height: 100%;
+
+   border-radius: 50%;
+
+   object-fit: cover;
+}
+
+.mentor-student-header-avatar > span {
+   position: absolute;
+
+   right: 0;
+   bottom: 0;
+
+   width: 10px;
+   height: 10px;
+
+   border: 2px solid white;
+
+   border-radius: 50%;
+
+   background: #22c55e;
+}
+
+.mentor-student-header-info {
+   margin-left: 11px;
+}
+
+.mentor-student-header-info h2 {
+   margin: 0;
+
+   font-size: 16px;
+}
+
+.mentor-student-header-info p {
+   margin: 3px 0;
+
+   color: #64748b;
+
+   font-size: 10px;
+}
+
+.mentor-online {
+   color: #16a34a;
+
+   font-size: 10px;
+
+   font-weight: 700;
+}
+
+.mentor-connecting {
+   color: #94a3b8;
+
+   font-size: 10px;
+}
+
+
+/* =========================================
+  MESSAGES
+========================================= */
+
+.mentor-messages-area {
+   flex: 1;
+
+   min-height: 0;
+
+   overflow-y: auto;
+   overflow-x: hidden;
+
+   padding:
+       22px 24px 10px;
+}
+
+.mentor-chat-center
+.message-list {
+   min-height: 100%;
+}
+
+
+/* =========================================
+  INPUT
+========================================= */
+
+.mentor-chat-center
+.message-input-container {
+   flex-shrink: 0;
+}
+
+
+/* =========================================
+  RIGHT PANEL
+========================================= */
+
+.mentor-student-info-panel {
+   min-height: 0;
+
+   overflow-y: auto;
+
+   display: flex;
+   flex-direction: column;
+
+   gap: 16px;
+}
+
+.mentor-student-card {
+   padding: 23px;
+}
+
+.mentor-student-profile-top {
+   display: flex;
+
+   align-items: center;
+
+   gap: 13px;
+}
+
+.mentor-large-student-avatar {
+   width: 72px;
+   height: 72px;
+
+   flex-shrink: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   background: #dce6ff;
+   color: #1e3a8a;
+
+   font-size: 23px;
+   font-weight: 800;
+
+   overflow: hidden;
+}
+
+.mentor-large-student-avatar img {
+   width: 100%;
+   height: 100%;
+
+   object-fit: cover;
+}
+
+.mentor-student-profile-top h2 {
+   margin: 0;
+
+   font-size: 17px;
+}
+
+.mentor-student-profile-top p {
+   margin: 4px 0 0;
+
+   color: #64748b;
+
+   font-size: 10px;
+}
+
+
+/* =========================================
+  INFO
+========================================= */
+
+.mentor-info-divider {
+   height: 1px;
+
+   margin: 20px 0;
+
+   background: #edf0f4;
+}
+
+.mentor-info-section {
+   margin-bottom: 20px;
+}
+
+.mentor-info-section h3 {
+   margin: 0 0 8px;
+
+   font-size: 11px;
+   font-weight: 800;
+}
+
+.mentor-info-section p {
+   margin: 0;
+
+   color: #334155;
+
+   font-size: 11px;
+
+   line-height: 1.6;
+}
+
+.mentor-info-section span {
+   display: block;
+
+   margin-top: 3px;
+
+   color: #94a3b8;
+
+   font-size: 10px;
+}
+
+
+/* =========================================
+  ERROR / LOADING
+========================================= */
+
+.mentor-chat-error-bar {
+   margin: 8px 15px 0;
+
+   padding: 8px 10px;
+
+   border-radius: 8px;
+
+   background: #fef2f2;
+
+   color: #b91c1c;
+
+   font-size: 10px;
+}
+
+.mentor-chat-loading,
+.mentor-chat-error {
+   min-height: 100vh;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-direction: column;
+
+   background: #f6f8fb;
+}
+
+.mentor-chat-spinner {
+   width: 34px;
+   height: 34px;
+
+   border: 3px solid #e5e7eb;
+   border-top-color: #111827;
+
+   border-radius: 50%;
+
+   animation:
+       mentorChatSpin
+       0.8s linear infinite;
+}
+
+@keyframes mentorChatSpin {
+
+   to {
+       transform: rotate(360deg);
+   }
+}
+
+
+/* =========================================
+  RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+   .mentor-chat-layout {
+       grid-template-columns:
+           270px
+           1fr;
+   }
+
+   .mentor-student-info-panel {
+       display: none;
+   }
+}
+
+@media (max-width: 700px) {
+
+   .mentor-chat-layout {
+       display: block;
+
+       height: auto;
+
+       min-height: calc(100vh - 76px);
+
+       padding: 12px;
+   }
+
+   .mentor-chat-sidebar {
+       display: none;
+   }
+
+   .mentor-chat-center {
+       height: calc(100vh - 100px);
+ 
+       min-height: 0;
+   }
+}

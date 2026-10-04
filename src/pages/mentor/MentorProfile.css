@@ -1,0 +1,2267 @@
+/* =========================================================
+   MENTOR PROFILE — MODERN COLLEGE CONNECT UI
+========================================================= */
+
+.mentor-profile-page {
+   min-height: 100vh;
+   padding: 36px 24px 80px;
+   background:
+       radial-gradient(circle at 10% 5%, rgba(59, 130, 246, 0.06), transparent 28%),
+       radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.05), transparent 25%),
+       #f7f9fc;
+   color: #111827;
+}
+
+.mentor-profile-container {
+   width: min(1180px, 100%);
+   margin: 0 auto;
+}
+
+
+/* =========================================================
+  GLOBAL
+========================================================= */
+
+.section-label {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+
+   font-size: 10px;
+   font-weight: 800;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+
+   color: #667085;
+}
+
+.section-label::before {
+   content: "";
+   width: 20px;
+   height: 2px;
+
+   border-radius: 10px;
+
+   background: #111827;
+}
+
+
+/* =========================================================
+  TOP AREA
+========================================================= */
+
+.mentor-profile-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+
+   gap: 30px;
+   margin-bottom: 28px;
+}
+
+.mentor-profile-top h1 {
+   margin: 10px 0 9px;
+
+   font-size: 36px;
+   line-height: 1.1;
+   letter-spacing: -0.035em;
+
+   color: #101828;
+}
+
+.mentor-profile-top p {
+   max-width: 700px;
+   margin: 0;
+
+   font-size: 14px;
+   line-height: 1.75;
+
+   color: #667085;
+}
+
+
+/* =========================================================
+  BUTTONS
+========================================================= */
+
+.profile-btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   min-height: 44px;
+   padding: 11px 17px;
+
+   border-radius: 11px;
+
+   font-family: inherit;
+   font-size: 13px;
+   font-weight: 700;
+
+   cursor: pointer;
+
+   transition:
+       all 0.22s ease;
+}
+
+.profile-btn.primary {
+   border: 1px solid #111827;
+
+   background: linear-gradient(
+       135deg,
+       #111827,
+       #202938
+   );
+
+   color: #ffffff;
+
+   box-shadow:
+       0 8px 18px rgba(17, 24, 39, 0.14);
+}
+
+.profile-btn.primary:hover {
+   transform: translateY(-2px);
+
+   box-shadow:
+       0 13px 24px rgba(17, 24, 39, 0.20);
+}
+
+.profile-btn.outline {
+   border: 1px solid #d9e1ea;
+
+   background: #ffffff;
+
+   color: #344054;
+}
+
+.profile-btn.outline:hover {
+   transform: translateY(-2px);
+
+   border-color: #c7d0db;
+
+   background: #f9fafb;
+}
+
+
+/* =========================================================
+  HERO / PROFILE HEADER
+========================================================= */
+
+.mentor-profile-header {
+   position: relative;
+
+   display: grid;
+   grid-template-columns: auto minmax(0, 1fr) auto;
+
+   align-items: center;
+
+   gap: 25px;
+
+   margin-bottom: 25px;
+   padding: 34px;
+
+   overflow: hidden;
+
+   border: 1px solid rgba(255, 255, 255, 0.10);
+   border-radius: 22px;
+
+   background:
+       radial-gradient(
+           circle at 85% -10%,
+           rgba(96, 165, 250, 0.17),
+           transparent 30%
+       ),
+       radial-gradient(
+           circle at -5% 105%,
+           rgba(71, 85, 105, 0.18),
+           transparent 32%
+       ),
+       linear-gradient(
+           135deg,
+           #0d1626 0%,
+           #111827 55%,
+           #172033 100%
+       );
+
+   box-shadow:
+       0 22px 45px rgba(15, 23, 42, 0.18);
+}
+
+
+/* Decorative ring */
+
+.mentor-profile-header::before {
+   content: "";
+
+   position: absolute;
+
+   width: 360px;
+   height: 360px;
+
+   top: -250px;
+   right: -90px;
+
+   border: 1px solid rgba(255, 255, 255, 0.08);
+
+   border-radius: 50%;
+}
+
+.mentor-profile-header::after {
+   content: "";
+
+   position: absolute;
+
+   width: 220px;
+   height: 220px;
+
+   right: 45px;
+   bottom: -170px;
+
+   border: 1px solid rgba(255, 255, 255, 0.06);
+
+   border-radius: 50%;
+}
+
+
+/* =========================================================
+  AVATAR
+========================================================= */
+
+.mentor-profile-avatar {
+   position: relative;
+   z-index: 2;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 108px;
+   height: 108px;
+
+   flex-shrink: 0;
+
+   overflow: hidden;
+
+   border-radius: 50%;
+
+   background:
+       linear-gradient(
+           145deg,
+           #ffffff,
+           #dbe4ee
+       );
+
+   color: #111827;
+
+   font-size: 32px;
+   font-weight: 800;
+
+   border: 4px solid rgba(255, 255, 255, 0.16);
+
+   box-shadow:
+       0 12px 30px rgba(0, 0, 0, 0.24);
+}
+
+.mentor-profile-avatar img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+/* =========================================================
+  HERO INFO
+========================================================= */
+
+.mentor-profile-header-info {
+   position: relative;
+   z-index: 2;
+
+   min-width: 0;
+}
+
+.mentor-profile-header-info .section-label {
+   color: #91a0b6;
+}
+
+.mentor-profile-header-info .section-label::before {
+   background: #94a3b8;
+}
+
+.mentor-profile-header h1 {
+   margin: 7px 0 5px;
+
+   font-size: 32px;
+   line-height: 1.15;
+
+   letter-spacing: -0.03em;
+
+   color: #ffffff;
+}
+
+.mentor-profile-title {
+   margin: 0 !important;
+
+   font-size: 16px !important;
+   font-weight: 650 !important;
+
+   color: #d2d9e4 !important;
+}
+
+.mentor-academic-line {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+
+   gap: 10px;
+
+   margin-top: 12px;
+
+   font-size: 13px;
+
+   color: #a3afc0;
+}
+
+.mentor-profile-email {
+   margin: 9px 0 0 !important;
+
+   font-size: 12px !important;
+
+   color: #7e8ba0 !important;
+}
+
+
+/* =========================================================
+  HERO EDIT BUTTON
+========================================================= */
+
+.mentor-profile-header .profile-btn.outline {
+   position: relative;
+   z-index: 3;
+
+   border-color: rgba(255, 255, 255, 0.15);
+
+   background: rgba(255, 255, 255, 0.07);
+
+   color: #ffffff;
+
+   backdrop-filter: blur(10px);
+}
+
+.mentor-profile-header .profile-btn.outline:hover {
+   background: rgba(255, 255, 255, 0.12);
+
+   border-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+  PROFILE GRID
+========================================================= */
+
+.mentor-profile-grid {
+   display: grid;
+
+   grid-template-columns:
+       minmax(0, 1fr)
+       330px;
+
+   gap: 22px;
+
+   align-items: start;
+}
+
+.mentor-profile-main {
+   min-width: 0;
+}
+
+.mentor-profile-sidebar {
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+}
+
+
+/* =========================================================
+  MAIN CARDS
+========================================================= */
+
+.mentor-profile-main .mentor-profile-card {
+   position: relative;
+
+   margin-bottom: 18px;
+   padding: 27px;
+
+   overflow: hidden;
+
+   border: 1px solid #e5eaf0;
+   border-radius: 18px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #ffffff 0%,
+           #fcfdff 100%
+       );
+
+   box-shadow:
+       0 8px 24px rgba(15, 23, 42, 0.045);
+
+   transition:
+       transform 0.22s ease,
+       box-shadow 0.22s ease,
+       border-color 0.22s ease;
+}
+
+.mentor-profile-main .mentor-profile-card:hover {
+   transform: translateY(-2px);
+
+   border-color: #d8e0e9;
+
+   box-shadow:
+       0 14px 30px rgba(15, 23, 42, 0.07);
+}
+
+.mentor-profile-main .mentor-profile-card:last-child {
+   margin-bottom: 0;
+}
+
+
+/* left accent */
+
+.mentor-profile-main .mentor-profile-card::before {
+   content: "";
+
+   position: absolute;
+
+   top: 24px;
+   left: 0;
+
+   width: 3px;
+   height: 30px;
+
+   border-radius: 0 8px 8px 0;
+
+   background:
+       linear-gradient(
+           180deg,
+           #111827,
+           #64748b
+       );
+}
+
+
+/* =========================================================
+  CARD HEADINGS
+========================================================= */
+
+.mentor-profile-card h2 {
+   margin: 7px 0 14px;
+
+   font-size: 20px;
+   line-height: 1.3;
+
+   letter-spacing: -0.015em;
+
+   color: #101828;
+}
+
+.mentor-profile-bio {
+   margin: 0;
+
+   font-size: 14px !important;
+   line-height: 1.9 !important;
+
+   color: #667085 !important;
+
+   white-space: pre-line;
+}
+
+
+/* =========================================================
+  INFO CARDS
+========================================================= */
+
+.mentor-info-grid {
+   display: grid;
+
+   grid-template-columns:
+       repeat(2, minmax(0, 1fr));
+
+   gap: 12px;
+
+   margin-top: 18px;
+}
+
+.mentor-info-grid > div {
+   position: relative;
+
+   padding: 16px;
+
+   border: 1px solid #e8edf3;
+
+   border-radius: 13px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #fbfcfe,
+           #f7f9fb
+       );
+
+   transition:
+       all 0.2s ease;
+}
+
+.mentor-info-grid > div:hover {
+   transform: translateY(-2px);
+
+   border-color: #d8e1eb;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 8px 18px rgba(15, 23, 42, 0.045);
+}
+
+.mentor-info-grid small {
+   display: block;
+
+   margin-bottom: 7px;
+
+   font-size: 10px;
+   font-weight: 800;
+
+   text-transform: uppercase;
+   letter-spacing: 0.08em;
+
+   color: #98a2b3;
+}
+
+.mentor-info-grid strong {
+   display: block;
+
+   margin: 0;
+
+   font-size: 14px;
+   line-height: 1.55;
+
+   color: #172033;
+}
+
+
+/* =========================================================
+  SKILLS
+========================================================= */
+
+.mentor-skills {
+   display: flex;
+   flex-wrap: wrap;
+
+   gap: 9px;
+
+   margin-top: 17px;
+}
+
+.mentor-skill {
+   position: relative;
+
+   display: inline-flex;
+   align-items: center;
+
+   padding: 8px 13px;
+
+   border: 1px solid #dce3eb;
+   border-radius: 999px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #f9fafb,
+           #eef2f6
+       );
+
+   color: #344054;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   transition:
+       all 0.2s ease;
+}
+
+.mentor-skill:hover {
+   transform: translateY(-2px);
+
+   background: #e9eef5;
+
+   border-color: #cbd5e1;
+
+   box-shadow:
+       0 5px 12px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+  SOCIAL LINKS
+========================================================= */
+
+.mentor-social-links {
+   display: flex;
+   flex-direction: column;
+
+   gap: 10px;
+
+   margin-top: 16px;
+}
+
+.mentor-social-links a {
+   position: relative;
+
+   display: flex;
+   align-items: center;
+
+   gap: 12px;
+
+   padding: 14px 15px;
+
+   border: 1px solid #e7ecf1;
+   border-radius: 12px;
+
+   background: #fafbfd;
+
+   text-decoration: none;
+
+   transition:
+       all 0.22s ease;
+}
+
+.mentor-social-links a::before {
+   content: "";
+
+   width: 4px;
+   height: 28px;
+
+   flex-shrink: 0;
+
+   border-radius: 999px;
+
+   background: #d4dce6;
+}
+
+.mentor-social-links a:hover {
+   transform: translateX(3px);
+
+   border-color: #d5dee8;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+.mentor-social-links strong {
+   margin: 0;
+
+   font-size: 13px;
+
+   color: #172033;
+}
+
+.mentor-social-links span {
+   flex: 1;
+
+   min-width: 0;
+
+   overflow: hidden;
+
+   white-space: nowrap;
+   text-overflow: ellipsis;
+
+   font-size: 12px;
+
+   color: #7b8797;
+}
+
+.mentor-social-links b {
+   font-size: 17px;
+
+   color: #667085;
+}
+
+
+/* =========================================================
+  SIDEBAR CARDS
+========================================================= */
+
+.mentor-sidebar-card {
+   position: relative;
+
+   padding: 22px;
+
+   overflow: hidden;
+
+   border: 1px solid #e4e9f0;
+   border-radius: 17px;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 8px 22px rgba(15, 23, 42, 0.045);
+}
+
+.mentor-sidebar-card::before {
+   content: "";
+
+   position: absolute;
+
+   width: 110px;
+   height: 110px;
+
+   top: -65px;
+   right: -50px;
+
+   border-radius: 50%;
+
+   background:
+       radial-gradient(
+           circle,
+           rgba(148, 163, 184, 0.12),
+           transparent 70%
+       );
+}
+
+.mentor-sidebar-card h3 {
+   position: relative;
+
+   margin: 7px 0 20px;
+
+   font-size: 18px;
+
+   color: #101828;
+}
+
+
+/* =========================================================
+  MENTORSHIP DETAILS
+========================================================= */
+
+.mentor-contact-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   gap: 15px;
+
+   padding: 14px 0;
+
+   border-bottom: 1px solid #edf1f5;
+}
+
+.mentor-contact-item:last-child {
+   border-bottom: none;
+   padding-bottom: 0;
+}
+
+.mentor-contact-item:first-of-type {
+   padding-top: 0;
+}
+
+.mentor-contact-item small {
+   font-size: 10px;
+   font-weight: 800;
+
+   text-transform: uppercase;
+   letter-spacing: 0.08em;
+
+   color: #98a2b3;
+}
+
+.mentor-contact-item strong {
+   margin: 0;
+
+   font-size: 14px;
+
+   color: #172033;
+}
+
+
+/* mentor type badge */
+
+.mentor-contact-item:first-of-type strong {
+   padding: 6px 11px;
+
+   border: 1px solid #dfe5ec;
+   border-radius: 999px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #f8fafc,
+           #eef2f5
+       );
+
+   font-size: 10px;
+
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+}
+
+
+/* =========================================================
+  ACCOUNT STATUS
+========================================================= */
+
+.profile-status {
+   display: flex;
+   align-items: flex-start;
+
+   gap: 12px;
+
+   padding: 14px;
+
+   border: 1px solid #e6ebf0;
+   border-radius: 13px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #fbfcfd,
+           #f7f9fb
+       );
+}
+
+.profile-status > span {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 31px;
+   height: 31px;
+
+   flex-shrink: 0;
+
+   border-radius: 50%;
+
+   background: #111827;
+
+   color: #ffffff;
+
+   font-size: 13px;
+   font-weight: 800;
+
+   box-shadow:
+       0 5px 12px rgba(17, 24, 39, 0.15);
+}
+
+.profile-status strong {
+   display: block;
+
+   margin-bottom: 4px;
+
+   font-size: 14px;
+
+   color: #172033;
+}
+
+.profile-status p {
+   margin: 0;
+
+   font-size: 12px;
+
+   line-height: 1.55;
+
+   color: #7a8697;
+}
+
+
+/* =========================================================
+  CREATE PROFILE STATE
+========================================================= */
+
+.mentor-profile-state {
+   display: flex;
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: center;
+
+   min-height: 430px;
+
+   padding: 40px;
+
+   text-align: center;
+
+   border: 1px solid #e3e9f0;
+   border-radius: 20px;
+
+   background:
+       radial-gradient(
+           circle at 50% 0%,
+           rgba(59, 130, 246, 0.07),
+           transparent 35%
+       ),
+       #ffffff;
+
+   box-shadow:
+       0 12px 30px rgba(15, 23, 42, 0.05);
+}
+
+.mentor-profile-state h2 {
+   margin: 0 0 8px;
+
+   font-size: 25px;
+
+   color: #111827;
+}
+
+.mentor-profile-state p {
+   margin: 0;
+
+   color: #667085;
+
+   font-size: 14px;
+}
+
+
+/* =========================================================
+  FORM
+========================================================= */
+
+.mentor-profile-form {
+   display: flex;
+   flex-direction: column;
+
+   gap: 18px;
+}
+
+.mentor-form-card {
+   position: relative;
+
+   padding: 27px;
+
+   overflow: hidden;
+
+   border: 1px solid #e4e9f0;
+   border-radius: 17px;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 7px 22px rgba(15, 23, 42, 0.035);
+}
+
+.mentor-form-card::before {
+   content: "";
+
+   position: absolute;
+
+   top: 24px;
+   left: 0;
+
+   width: 3px;
+   height: 31px;
+
+   border-radius: 0 7px 7px 0;
+
+   background:
+       linear-gradient(
+           180deg,
+           #111827,
+           #718096
+       );
+}
+
+.mentor-form-card h2 {
+   margin: 7px 0 20px;
+
+   font-size: 20px;
+   letter-spacing: -0.015em;
+
+   color: #101828;
+}
+
+
+/* =========================================================
+  FORM GRID
+========================================================= */
+
+.mentor-form-grid {
+   display: grid;
+
+   grid-template-columns:
+       repeat(2, minmax(0, 1fr));
+
+   gap: 18px;
+}
+
+
+/* =========================================================
+  INPUT GROUP
+========================================================= */
+
+.mentor-form-group {
+   display: flex;
+   flex-direction: column;
+
+   gap: 8px;
+
+   min-width: 0;
+}
+
+.mentor-form-group label {
+   font-size: 13px;
+   font-weight: 700;
+
+   color: #344054;
+}
+
+.mentor-form-group small {
+   font-size: 12px;
+
+   color: #98a2b3;
+}
+
+
+/* =========================================================
+  INPUTS
+========================================================= */
+
+.mentor-form-group input,
+.mentor-form-group select,
+.mentor-form-group textarea {
+   width: 100%;
+
+   box-sizing: border-box;
+
+   padding: 13px 14px;
+
+   border: 1px solid #dce3eb;
+
+   border-radius: 11px;
+
+   background: #ffffff;
+
+   color: #172033;
+
+   font-family: inherit;
+   font-size: 14px;
+
+   outline: none;
+
+   transition:
+       border-color 0.2s ease,
+       box-shadow 0.2s ease,
+       background 0.2s ease;
+}
+
+.mentor-form-group input::placeholder,
+.mentor-form-group textarea::placeholder {
+   color: #a5afbc;
+}
+
+.mentor-form-group input:hover,
+.mentor-form-group select:hover,
+.mentor-form-group textarea:hover {
+   border-color: #cbd5e1;
+}
+
+.mentor-form-group input:focus,
+.mentor-form-group select:focus,
+.mentor-form-group textarea:focus {
+   border-color: #111827;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 0 0 3px rgba(17, 24, 39, 0.06);
+}
+
+.mentor-form-group textarea {
+   min-height: 150px;
+
+   resize: vertical;
+
+   line-height: 1.7;
+}
+
+.mentor-form-group select {
+   cursor: pointer;
+}
+
+
+/* =========================================================
+  ACTIONS
+========================================================= */
+
+.mentor-form-actions {
+   display: flex;
+   justify-content: flex-end;
+
+   gap: 12px;
+
+   padding-top: 5px;
+}
+
+.mentor-form-actions button {
+   min-width: 135px;
+}
+
+.mentor-form-actions button:disabled {
+   opacity: 0.6;
+
+   cursor: not-allowed;
+
+   transform: none;
+}
+
+
+/* =========================================================
+  ERROR
+========================================================= */
+
+.mentor-form-error {
+   padding: 13px 15px;
+
+   border: 1px solid #f1caca;
+
+   border-radius: 11px;
+
+   background: #fff6f6;
+
+   color: #b42318;
+
+   font-size: 13px;
+
+   box-shadow:
+       0 5px 15px rgba(180, 35, 24, 0.04);
+}
+
+
+/* =========================================================
+  MOBILE
+========================================================= */
+
+@media (max-width: 950px) {
+
+   .mentor-profile-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .mentor-profile-sidebar {
+       display: grid;
+
+       grid-template-columns:
+           repeat(2, minmax(0, 1fr));
+   }
+}
+
+
+@media (max-width: 760px) {
+
+   .mentor-profile-page {
+       padding: 25px 15px 55px;
+   }
+
+   .mentor-profile-top {
+       flex-direction: column;
+       align-items: stretch;
+
+       gap: 18px;
+   }
+
+   .mentor-profile-top h1 {
+       font-size: 29px;
+   }
+
+   .mentor-profile-header {
+       grid-template-columns: 1fr;
+
+       justify-items: center;
+
+       text-align: center;
+
+       padding: 29px 20px;
+
+       border-radius: 18px;
+   }
+
+   .mentor-profile-header-info {
+       width: 100%;
+   }
+
+   .mentor-profile-header h1 {
+       font-size: 28px;
+   }
+
+   .mentor-academic-line {
+       justify-content: center;
+   }
+
+   .mentor-profile-header .profile-btn {
+       width: 100%;
+   }
+
+   .mentor-form-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .mentor-form-card {
+       padding: 22px 18px;
+   }
+
+   .mentor-info-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .mentor-profile-sidebar {
+       display: flex;
+   }
+
+   .mentor-form-actions {
+       flex-direction: column-reverse;
+
+       align-items: stretch;
+   }
+
+   .mentor-form-actions button {
+       width: 100%;
+   }
+}
+
+
+@media (max-width: 480px) {
+
+   .mentor-profile-page {
+       padding: 18px 10px 40px;
+   }
+
+   .mentor-profile-top h1 {
+       font-size: 25px;
+   }
+
+   .mentor-profile-top p {
+       font-size: 13px;
+   }
+
+   .mentor-profile-header {
+       padding: 24px 16px;
+   }
+
+   .mentor-profile-avatar {
+       width: 86px;
+       height: 86px;
+
+       font-size: 27px;
+   }
+
+   .mentor-profile-header h1 {
+       font-size: 25px;
+   }
+
+   .mentor-profile-title {
+       font-size: 14px !important;
+   }
+
+   .mentor-profile-main .mentor-profile-card {
+       padding: 22px 17px;
+
+       border-radius: 15px;
+   }
+
+   .mentor-sidebar-card {
+       padding: 19px 17px;
+
+       border-radius: 14px;
+   }
+
+   .mentor-form-card {
+       padding: 21px 16px;
+
+       border-radius: 14px;
+   }
+
+   .mentor-form-card h2 {
+       font-size: 18px;
+   }
+
+   .mentor-social-links span {
+       display: none;
+   }
+
+   .mentor-social-links a {
+       justify-content: space-between;
+   }
+
+   
+}/* =========================================================
+   MENTOR PROFILE VIEW
+   SAME VISUAL LANGUAGE AS MENTOR DETAILS
+========================================================= */
+
+.mentor-profile-view {
+   padding: 0 0 80px;
+}
+
+
+/* =========================================================
+  HERO
+========================================================= */
+
+.mentor-profile-hero {
+   position: relative;
+
+   padding: 28px 0 34px;
+
+   overflow: hidden;
+
+   background:
+       radial-gradient(
+           circle at 85% 0%,
+           rgba(99, 102, 241, 0.10),
+           transparent 28%
+       ),
+       linear-gradient(
+           135deg,
+           #0e1728,
+           #111827 58%,
+           #172033
+       );
+
+   color: #ffffff;
+}
+
+
+/* decorative circles */
+
+.mentor-profile-hero::before {
+   content: "";
+
+   position: absolute;
+
+   width: 420px;
+   height: 420px;
+
+   top: -290px;
+   right: -90px;
+
+   border: 1px solid rgba(255, 255, 255, 0.07);
+
+   border-radius: 50%;
+}
+
+.mentor-profile-hero::after {
+   content: "";
+
+   position: absolute;
+
+   width: 240px;
+   height: 240px;
+
+   bottom: -175px;
+   left: -90px;
+
+   border: 1px solid rgba(255, 255, 255, 0.05);
+
+   border-radius: 50%;
+}
+
+
+/* =========================================================
+  BREADCRUMB
+========================================================= */
+
+.mentor-profile-breadcrumb {
+   position: relative;
+   z-index: 2;
+
+   display: flex;
+   align-items: center;
+
+   gap: 9px;
+
+   margin-bottom: 20px;
+
+   font-size: 12px;
+
+   color: #91a0b5;
+}
+
+.mentor-profile-breadcrumb span:first-child {
+   color: #c3ccd9;
+}
+
+.mentor-profile-breadcrumb span:last-child {
+   color: #718096;
+}
+
+
+/* =========================================================
+  HEADER
+========================================================= */
+
+.mentor-profile-view .mentor-profile-header {
+   position: relative;
+   z-index: 2;
+
+   display: grid;
+
+   grid-template-columns:
+       auto
+       minmax(0, 1fr)
+       auto;
+
+   align-items: center;
+
+   gap: 28px;
+
+   margin-bottom: 0;
+
+   padding: 34px;
+
+   overflow: hidden;
+
+   border: 1px solid rgba(255, 255, 255, 0.09);
+
+   border-radius: 22px;
+
+   background:
+       linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.045),
+           rgba(255, 255, 255, 0.02)
+       );
+
+   box-shadow:
+       0 24px 50px rgba(0, 0, 0, 0.20);
+
+   backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+  AVATAR
+========================================================= */
+
+.mentor-profile-view .mentor-profile-avatar {
+   position: relative;
+   z-index: 2;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 150px;
+   height: 150px;
+
+   min-width: 150px;
+
+   overflow: hidden;
+
+   border-radius: 50%;
+
+   background:
+       linear-gradient(
+           145deg,
+           #ffffff,
+           #dbe4ee
+       );
+
+   color: #111827;
+
+   font-size: 38px;
+   font-weight: 800;
+
+   border: 4px solid rgba(255, 255, 255, 0.16);
+
+   box-shadow:
+       0 14px 32px rgba(0, 0, 0, 0.25);
+}
+
+.mentor-profile-view .mentor-profile-avatar img {
+   width: 100%;
+   height: 100%;
+
+   object-fit: cover;
+
+   display: block;
+}
+
+
+/* =========================================================
+  HEADER INFO
+========================================================= */
+
+.mentor-profile-view .mentor-profile-header-info {
+   position: relative;
+   z-index: 2;
+
+   min-width: 0;
+}
+
+.mentor-profile-view
+.mentor-profile-header-info
+.section-label {
+   color: #91a0b6;
+}
+
+.mentor-profile-view
+.mentor-profile-header-info
+.section-label::before {
+   background: #94a3b8;
+}
+
+
+.mentor-profile-view .mentor-profile-header h1 {
+   margin: 7px 0 5px;
+
+   font-size: 34px;
+   line-height: 1.15;
+
+   letter-spacing: -0.035em;
+
+   color: #ffffff;
+}
+
+
+.mentor-profile-view .mentor-profile-title {
+   margin: 0 !important;
+
+   font-size: 15px !important;
+   font-weight: 600 !important;
+
+   color: #d2d9e4 !important;
+}
+
+
+.mentor-profile-view .mentor-academic-line {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+
+   gap: 10px;
+
+   margin-top: 15px;
+
+   font-size: 13px;
+
+   color: #aab5c4;
+}
+
+
+.mentor-profile-view .mentor-profile-experience {
+   margin: 10px 0 0;
+
+   font-size: 13px;
+
+   color: #8f9db0;
+}
+
+
+.mentor-profile-view .mentor-profile-email {
+   margin: 9px 0 0 !important;
+
+   font-size: 12px !important;
+
+   color: #7e8ba0 !important;
+}
+
+
+/* =========================================================
+  EDIT BUTTON
+========================================================= */
+
+.mentor-profile-view
+.profile-edit-button {
+   position: relative;
+   z-index: 3;
+
+   align-self: flex-start;
+
+   border-color: rgba(255, 255, 255, 0.15);
+
+   background: rgba(255, 255, 255, 0.07);
+
+   color: #ffffff;
+
+   backdrop-filter: blur(10px);
+}
+
+.mentor-profile-view
+.profile-edit-button:hover {
+   background: rgba(255, 255, 255, 0.12);
+
+   border-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+  CONTENT
+========================================================= */
+
+.mentor-profile-view .mentor-profile-content {
+   padding-top: 26px;
+}
+
+
+/* =========================================================
+  GRID
+========================================================= */
+
+.mentor-profile-view .mentor-profile-grid {
+   display: grid;
+
+   grid-template-columns:
+       minmax(0, 1fr)
+       330px;
+
+   gap: 22px;
+
+   align-items: start;
+}
+
+
+/* =========================================================
+  MAIN CARDS
+========================================================= */
+
+.mentor-profile-view
+.mentor-profile-main
+.mentor-profile-card {
+   position: relative;
+
+   margin-bottom: 18px;
+
+   padding: 27px;
+
+   overflow: hidden;
+
+   border: 1px solid #e3e8ef;
+
+   border-radius: 18px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #ffffff,
+           #fcfdff
+       );
+
+   box-shadow:
+       0 8px 24px rgba(15, 23, 42, 0.045);
+
+   transition:
+       transform 0.22s ease,
+       box-shadow 0.22s ease,
+       border-color 0.22s ease;
+}
+
+.mentor-profile-view
+.mentor-profile-main
+.mentor-profile-card:hover {
+   transform: translateY(-2px);
+
+   border-color: #d7dfe9;
+
+   box-shadow:
+       0 14px 32px rgba(15, 23, 42, 0.07);
+}
+
+
+/* accent */
+
+.mentor-profile-view
+.mentor-profile-main
+.mentor-profile-card::before {
+   content: "";
+
+   position: absolute;
+
+   top: 25px;
+   left: 0;
+
+   width: 3px;
+   height: 30px;
+
+   border-radius: 0 8px 8px 0;
+
+   background:
+       linear-gradient(
+           180deg,
+           #111827,
+           #718096
+       );
+}
+
+
+/* =========================================================
+  CARD HEADINGS
+========================================================= */
+
+.mentor-profile-view
+.mentor-profile-card h2 {
+   margin: 8px 0 13px;
+
+   font-size: 21px;
+   line-height: 1.3;
+
+   letter-spacing: -0.018em;
+
+   color: #101828;
+}
+
+
+.mentor-profile-view
+.mentor-profile-bio {
+   margin: 0;
+
+   font-size: 14px !important;
+
+   line-height: 1.9 !important;
+
+   color: #667085 !important;
+
+   white-space: pre-line;
+}
+
+
+/* =========================================================
+  INFO GRID
+========================================================= */
+
+.mentor-profile-view .mentor-info-grid {
+   display: grid;
+
+   grid-template-columns:
+       repeat(2, minmax(0, 1fr));
+
+   gap: 12px;
+
+   margin-top: 17px;
+}
+
+.mentor-profile-view .mentor-info-grid > div {
+   padding: 16px;
+
+   border: 1px solid #e8edf3;
+
+   border-radius: 13px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #fbfcfe,
+           #f7f9fb
+       );
+
+   transition: all 0.2s ease;
+}
+
+.mentor-profile-view .mentor-info-grid > div:hover {
+   transform: translateY(-2px);
+
+   border-color: #d8e1eb;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 8px 18px rgba(15, 23, 42, 0.045);
+}
+
+.mentor-profile-view .mentor-info-grid small {
+   display: block;
+
+   margin-bottom: 7px;
+
+   font-size: 10px;
+   font-weight: 800;
+
+   text-transform: uppercase;
+   letter-spacing: 0.08em;
+
+   color: #98a2b3;
+}
+
+.mentor-profile-view .mentor-info-grid strong {
+   display: block;
+
+   font-size: 14px;
+   line-height: 1.55;
+
+   color: #172033;
+}
+
+
+/* =========================================================
+  SKILLS
+========================================================= */
+
+.mentor-profile-view .mentor-skills {
+   display: flex;
+   flex-wrap: wrap;
+
+   gap: 9px;
+
+   margin-top: 16px;
+}
+
+.mentor-profile-view .mentor-skill {
+   display: inline-flex;
+   align-items: center;
+
+   padding: 8px 13px;
+
+   border: 1px solid #dce3eb;
+
+   border-radius: 999px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #fafbfc,
+           #eef2f6
+       );
+
+   color: #344054;
+
+   font-size: 12px;
+   font-weight: 700;
+
+   transition: all 0.2s ease;
+}
+
+.mentor-profile-view .mentor-skill:hover {
+   transform: translateY(-2px);
+
+   border-color: #cbd5e1;
+
+   background: #e9eef4;
+}
+
+
+/* =========================================================
+  LEARNING
+========================================================= */
+
+.mentor-profile-view .learning-grid {
+   display: grid;
+
+   grid-template-columns:
+       repeat(2, minmax(0, 1fr));
+
+   gap: 12px;
+
+   margin-top: 17px;
+}
+
+.mentor-profile-view .learning-item {
+   display: flex;
+   align-items: flex-start;
+
+   gap: 13px;
+
+   padding: 16px;
+
+   border: 1px solid #e7ecf1;
+
+   border-radius: 13px;
+
+   background:
+       linear-gradient(
+           180deg,
+           #fbfcfd,
+           #f7f9fb
+       );
+
+   transition: all 0.2s ease;
+}
+
+.mentor-profile-view .learning-item:hover {
+   transform: translateY(-2px);
+
+   border-color: #d7e0e9;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+.mentor-profile-view .learning-icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 42px;
+   height: 42px;
+
+   flex-shrink: 0;
+
+   border: 1px solid #e2e8ef;
+
+   border-radius: 11px;
+
+   background: #ffffff;
+
+   font-size: 18px;
+}
+
+
+/* =========================================================
+  SIDEBAR
+========================================================= */
+
+.mentor-profile-view .mentor-profile-sidebar {
+   display: flex;
+   flex-direction: column;
+
+   gap: 16px;
+}
+
+
+/* =========================================================
+  DARK ACCESS CARD
+========================================================= */
+
+.mentor-profile-access-card {
+   position: relative;
+
+   padding: 23px;
+
+   overflow: hidden;
+
+   border: 1px solid #1e293b;
+
+   border-radius: 18px;
+
+   background:
+       radial-gradient(
+           circle at 100% 0%,
+           rgba(96, 165, 250, 0.13),
+           transparent 35%
+       ),
+       linear-gradient(
+           145deg,
+           #0f172a,
+           #111827
+       );
+
+   color: #ffffff;
+
+   box-shadow:
+       0 18px 34px rgba(15, 23, 42, 0.17);
+}
+
+.mentor-profile-access-card::before {
+   content: "";
+
+   position: absolute;
+
+   width: 180px;
+   height: 180px;
+
+   right: -95px;
+   top: -100px;
+
+   border: 1px solid rgba(255, 255, 255, 0.07);
+
+   border-radius: 50%;
+}
+
+
+/* top */
+
+.profile-access-top {
+   position: relative;
+   z-index: 1;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+
+   gap: 18px;
+
+   padding-bottom: 18px;
+
+   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.profile-access-top .section-label {
+   color: #91a0b6;
+}
+
+.profile-access-top .section-label::before {
+   background: #94a3b8;
+}
+
+.profile-access-price {
+   font-size: 28px;
+   font-weight: 800;
+
+   letter-spacing: -0.03em;
+
+   white-space: nowrap;
+}
+
+.profile-access-price small {
+   font-size: 11px;
+   font-weight: 500;
+
+   color: #8d9aae;
+}
+
+
+/* status */
+
+.profile-access-status {
+   position: relative;
+   z-index: 1;
+
+   display: flex;
+   align-items: flex-start;
+
+   gap: 12px;
+
+   margin-top: 18px;
+
+   padding: 13px;
+
+   border: 1px solid rgba(255, 255, 255, 0.09);
+
+   border-radius: 12px;
+
+   background: rgba(255, 255, 255, 0.045);
+}
+
+.profile-access-icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 30px;
+   height: 30px;
+
+   flex-shrink: 0;
+
+   border-radius: 50%;
+
+   background: rgba(255, 255, 255, 0.10);
+
+   color: #ffffff;
+
+   font-size: 12px;
+   font-weight: 800;
+}
+
+.profile-access-status strong {
+   display: block;
+
+   margin-bottom: 4px;
+
+   font-size: 13px;
+}
+
+.profile-access-status p {
+   margin: 0;
+
+   font-size: 11px;
+
+   line-height: 1.55;
+
+   color: #93a0b2;
+}
+
+.profile-access-note {
+   position: relative;
+   z-index: 1;
+
+   margin-top: 16px;
+
+   text-align: center;
+
+   font-size: 11px;
+
+   color: #93a0b2;
+}
+
+
+/* =========================================================
+  SIDEBAR SOCIALS
+========================================================= */
+
+.mentor-profile-view .mentor-sidebar-card {
+   position: relative;
+
+   padding: 22px;
+
+   overflow: hidden;
+
+   border: 1px solid #e4e9f0;
+
+   border-radius: 17px;
+
+   background: #ffffff;
+
+   box-shadow:
+       0 8px 22px rgba(15, 23, 42, 0.045);
+}
+
+.mentor-profile-view
+.mentor-sidebar-card h3 {
+   margin: 7px 0 18px;
+
+   font-size: 18px;
+
+   color: #101828;
+}
+
+
+/* =========================================================
+  RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+   .mentor-profile-view
+   .mentor-profile-header {
+       grid-template-columns:
+           auto
+           minmax(0, 1fr);
+   }
+
+   .mentor-profile-view
+   .profile-edit-button {
+       grid-column: 1 / -1;
+       justify-self: flex-start;
+   }
+
+   .mentor-profile-view
+   .mentor-profile-grid {
+       grid-template-columns: 1fr;
+   }
+
+}
+
+
+@media (max-width: 650px) {
+
+   .mentor-profile-view
+   .mentor-profile-header {
+       grid-template-columns: 1fr;
+       text-align: center;
+       justify-items: center;
+
+       padding: 25px;
+   }
+
+   .mentor-profile-view
+   .mentor-profile-avatar {
+       width: 125px;
+       height: 125px;
+       min-width: 125px;
+   }
+
+   .mentor-profile-view
+   .mentor-academic-line {
+       justify-content: center;
+   }
+
+   .mentor-profile-view
+   .mentor-profile-sidebar {
+       width: 100%;
+   }
+
+   .mentor-profile-view
+   .mentor-profile-main
+   .mentor-profile-card {
+       padding: 22px;
+   }
+
+   .mentor-profile-view
+   .mentor-info-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .mentor-profile-view
+   .learning-grid {
+       grid-template-columns: 1fr;
+   }
+
+   /* FORCE MENTOR PROFILE AVATAR SIZE */
+   .mentor-profile-view .mentor-profile-avatar {
+      width: 150px !important;
+      height: 150px !important;
+      min-width: 150px !important;
+      max-width: 150px !important;
+  
+      min-height: 150px !important;
+      max-height: 150px !important;
+  
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+  
+      flex-shrink: 0;
+  
+      overflow: hidden !important;
+      border-radius: 50% !important;
+  
+      box-sizing: border-box;
+  }
+  
+  .mentor-profile-view .mentor-profile-avatar img {
+      width: 100% !important;
+      height: 100% !important;
+  
+      min-width: 100% !important;
+      min-height: 100% !important;
+  
+      max-width: none !important;
+      max-height: none !important;
+  
+      display: block !important;
+  
+      object-fit: cover !important;
+      object-position: center;
+  }
+/* =========================================
+   MENTOR PROFILE AVATAR FIX
+========================================= */
+
+.mentor-profile-avatar {
+   width: 150px !important;
+   height: 150px !important;
+   min-width: 150px !important;
+   max-width: 150px !important;
+
+   min-height: 150px !important;
+   max-height: 150px !important;
+
+   flex-shrink: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   overflow: hidden;
+   border-radius: 50%;
+
+   box-sizing: border-box;
+}
+
+.mentor-profile-avatar img {
+   width: 100% !important;
+   height: 100% !important;
+
+   min-width: 100%;
+   min-height: 100%;
+
+   max-width: none;
+   max-height: none;
+
+   display: block;
+
+   object-fit: cover !important;
+   object-position: center;
+}
+}

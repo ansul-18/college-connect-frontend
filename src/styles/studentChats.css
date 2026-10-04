@@ -1,0 +1,636 @@
+.student-chats-page {
+   min-height: calc(100vh - 76px);
+
+   background: #f6f8fb;
+
+   padding: 38px 42px;
+}
+
+
+.student-chats-container {
+   max-width: 1050px;
+
+   margin: auto;
+}
+
+
+/* HEADER */
+
+.student-chats-heading {
+   display: flex;
+
+   justify-content: space-between;
+   align-items: flex-end;
+
+   margin-bottom: 25px;
+}
+
+
+.heading-label {
+   margin: 0 0 7px;
+
+   color: #64748b;
+
+   font-size: 11px;
+
+   font-weight: 800;
+
+   letter-spacing: 2px;
+}
+
+
+.student-chats-heading h1 {
+   margin: 0;
+
+   color: #111827;
+
+   font-size: 34px;
+
+   font-weight: 850;
+}
+
+
+.heading-description {
+   margin: 8px 0 0;
+
+   color: #64748b;
+
+   font-size: 13px;
+}
+
+
+.chat-count {
+   display: flex;
+
+   flex-direction: column;
+
+   align-items: center;
+
+   justify-content: center;
+
+   width: 120px;
+   height: 75px;
+
+   border: 1px solid #e4e8ee;
+
+   border-radius: 16px;
+
+   background: white;
+}
+
+
+.chat-count strong {
+   font-size: 24px;
+}
+
+
+.chat-count span {
+   color: #94a3b8;
+
+   font-size: 10px;
+
+   font-weight: 600;
+}
+
+
+/* SEARCH */
+
+.chat-list-search {
+   display: flex;
+
+   align-items: center;
+
+   gap: 10px;
+
+   height: 50px;
+
+   padding: 0 16px;
+
+   border: 1px solid #e2e7ed;
+
+   border-radius: 13px;
+
+   background: white;
+
+   margin-bottom: 18px;
+}
+
+
+.chat-list-search span {
+   color: #94a3b8;
+
+   font-size: 20px;
+}
+
+
+.chat-list-search input {
+   width: 100%;
+
+   border: 0;
+
+   outline: 0;
+
+   background: transparent;
+
+   font-size: 13px;
+}
+
+
+/* LIST */
+
+.student-conversation-list {
+   display: flex;
+
+   flex-direction: column;
+
+   gap: 10px;
+}
+
+
+.student-chat-card {
+   display: flex;
+
+   align-items: center;
+
+   gap: 15px;
+
+   padding: 18px;
+
+   border: 1px solid #e5e9ef;
+
+   border-radius: 16px;
+
+   background: white;
+
+   cursor: pointer;
+
+   transition:
+       transform 0.18s ease,
+       box-shadow 0.18s ease,
+       border-color 0.18s ease;
+}
+
+
+.student-chat-card:hover {
+   transform: translateY(-2px);
+
+   border-color: #d7e1f0;
+
+   box-shadow:
+       0 10px 25px rgba(
+           15,
+           23,
+           42,
+           0.06
+       );
+}
+
+
+/* AVATAR */
+
+.student-chat-avatar {
+   position: relative;
+
+   width: 57px;
+   height: 57px;
+
+   flex-shrink: 0;
+
+   display: flex;
+
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   background: #dce6ff;
+
+   color: #1e3a8a;
+
+   font-size: 20px;
+
+   font-weight: 800;
+
+   overflow: visible;
+}
+
+
+.student-chat-avatar img {
+   width: 100%;
+   height: 100%;
+
+   border-radius: 50%;
+
+   object-fit: cover;
+}
+
+
+.student-chat-avatar span {
+   position: absolute;
+
+   right: 1px;
+   bottom: 2px;
+
+   width: 12px;
+   height: 12px;
+
+   border: 2px solid white;
+
+   border-radius: 50%;
+
+   background: #22c55e;
+}
+
+
+/* CONTENT */
+
+.student-chat-content {
+   flex: 1;
+
+   min-width: 0;
+}
+
+
+.student-chat-top {
+   display: flex;
+
+   justify-content: space-between;
+
+   align-items: center;
+
+   gap: 15px;
+}
+
+
+.student-chat-top h3 {
+   margin: 0;
+
+   color: #111827;
+
+   font-size: 15px;
+
+   font-weight: 800;
+}
+
+
+.student-chat-top span {
+   color: #94a3b8;
+
+   font-size: 10px;
+
+   white-space: nowrap;
+}
+
+
+.mentor-title {
+   margin: 4px 0;
+
+   color: #64748b;
+
+   font-size: 11px;
+
+   font-weight: 600;
+}
+
+
+.chat-last-message {
+   margin: 5px 0 0;
+
+   color: #94a3b8;
+
+   font-size: 11px;
+
+   overflow: hidden;
+
+   text-overflow: ellipsis;
+
+   white-space: nowrap;
+}
+
+
+/* ARROW */
+
+.chat-card-arrow {
+   display: flex;
+
+   align-items: center;
+   justify-content: center;
+
+   width: 36px;
+   height: 36px;
+
+   border-radius: 10px;
+
+   background: #f4f6f8;
+
+   color: #334155;
+
+   font-size: 18px;
+}
+
+
+/* EMPTY */
+
+.no-conversations {
+   min-height: 380px;
+
+   display: flex;
+
+   flex-direction: column;
+
+   align-items: center;
+
+   justify-content: center;
+
+   text-align: center;
+
+   border: 1px solid #e5e9ef;
+
+   border-radius: 18px;
+
+   background: white;
+}
+
+
+.no-chat-icon {
+   width: 65px;
+   height: 65px;
+
+   display: flex;
+
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   background: #f1f5f9;
+
+   font-size: 27px;
+}
+
+
+.no-conversations h2 {
+   margin: 15px 0 5px;
+
+   font-size: 19px;
+}
+
+
+.no-conversations p {
+   margin: 0;
+
+   color: #94a3b8;
+
+   font-size: 12px;
+}
+
+
+.no-conversations button,
+.chats-error button {
+   margin-top: 18px;
+
+   border: 0;
+
+   border-radius: 10px;
+
+   background: #121d31;
+
+   color: white;
+
+   padding: 11px 18px;
+
+   font-size: 12px;
+
+   font-weight: 700;
+
+   cursor: pointer;
+}
+
+
+/* LOADING */
+
+.chats-loading {
+   min-height: 400px;
+
+   display: flex;
+
+   flex-direction: column;
+
+   justify-content: center;
+
+   align-items: center;
+}
+
+
+.chats-spinner {
+   width: 34px;
+   height: 34px;
+
+   border: 3px solid #e5e7eb;
+
+   border-top-color: #111827;
+
+   border-radius: 50%;
+
+   animation: chatsSpin 0.8s linear infinite;
+}
+
+
+@keyframes chatsSpin {
+
+   to {
+       transform: rotate(360deg);
+   }
+
+}
+
+
+/* ERROR */
+
+.chats-error {
+   min-height: 400px;
+
+   display: flex;
+
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: center;
+
+   text-align: center;
+}
+
+
+.chats-error-icon {
+   width: 48px;
+   height: 48px;
+
+   display: flex;
+
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 50%;
+
+   background: #fee2e2;
+
+   color: #dc2626;
+
+   font-weight: 800;
+}
+
+
+.chats-error h2 {
+   margin: 14px 0 5px;
+}
+
+
+.chats-error p {
+   color: #64748b;
+
+   font-size: 12px;
+}
+
+
+@media (max-width: 700px) {
+
+   .student-chats-page {
+       padding: 25px 15px;
+   }
+
+   .student-chats-heading {
+       align-items: flex-start;
+       gap: 15px;
+   }
+
+   .student-chats-heading h1 {
+       font-size: 27px;
+   }
+
+   .chat-count {
+       width: 95px;
+   }
+}
+/* =========================================
+   UNREAD SUMMARY
+========================================= */
+
+.unread-summary {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+
+   margin-bottom: 14px;
+   padding: 9px 13px;
+
+   width: fit-content;
+
+   border: 1px solid #dbeafe;
+   border-radius: 999px;
+
+   background: #eff6ff;
+   color: #2563eb;
+
+   font-size: 11px;
+   font-weight: 700;
+}
+
+.unread-summary-dot {
+   width: 7px;
+   height: 7px;
+
+   border-radius: 50%;
+
+   background: #2563eb;
+}
+
+
+/* =========================================
+  MENTOR NAME + UNREAD
+========================================= */
+
+.mentor-name-wrapper {
+   min-width: 0;
+
+   display: flex;
+   align-items: center;
+
+   gap: 8px;
+}
+
+.mentor-name-wrapper h3 {
+   overflow: hidden;
+
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+
+/* =========================================
+  UNREAD BADGE
+========================================= */
+
+.chat-unread-badge {
+   min-width: 21px;
+   height: 21px;
+
+   padding: 0 6px;
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-shrink: 0;
+
+   border-radius: 999px;
+
+   background: #2563eb;
+   color: white;
+
+   font-size: 10px;
+   font-weight: 800;
+
+   line-height: 1;
+}
+
+
+/* =========================================
+  UNREAD CARD
+========================================= */
+
+.student-chat-card.unread {
+   border-color: #dbeafe;
+   background: #fcfdff;
+}
+
+.student-chat-card.unread:hover {
+   border-color: #bfdbfe;
+   box-shadow:
+       0 10px 25px rgba(
+           37,
+           99,
+           235,
+           0.08
+       );
+}
+
+
+/* =========================================
+  UNREAD MESSAGE
+========================================= */
+
+.chat-last-message.unread-message {
+   color: #334155;
+   font-weight: 700;
+}
+
+
+/* =========================================
+  TIME
+========================================= */
+
+.chat-time {
+   color: #94a3b8;
+   font-size: 10px;
+   white-space: nowrap;
+}

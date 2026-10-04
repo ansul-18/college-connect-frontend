@@ -1,0 +1,1432 @@
+/* =========================================================
+   MENTOR DETAILS PAGE
+   COLLEGE CONNECT — PREMIUM UI
+========================================================= */
+
+.mentor-details-page {
+  min-height: 100vh;
+
+  background:
+      radial-gradient(
+          circle at 8% 4%,
+          rgba(59, 130, 246, 0.045),
+          transparent 24%
+      ),
+      radial-gradient(
+          circle at 92% 8%,
+          rgba(99, 102, 241, 0.04),
+          transparent 22%
+      ),
+      #f7f9fc;
+
+  color: #111827;
+
+  padding-bottom: 80px;
+}
+
+
+/* =========================================================
+ COMMON CONTAINER
+========================================================= */
+
+.mentor-details-page .container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+ TOP HERO
+========================================================= */
+
+.mentor-detail-top {
+  position: relative;
+
+  padding: 21px 0 12px;
+
+  overflow: hidden;
+
+  background:
+      radial-gradient(
+          circle at 85% 0%,
+          rgba(99, 102, 241, 0.10),
+          transparent 28%
+      ),
+      linear-gradient(
+          135deg,
+          #0e1728,
+          #111827 58%,
+          #172033
+      );
+
+  color: #ffffff;
+}
+
+.mentor-detail-top::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -290px;
+  right: -90px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 50%;
+}
+
+.mentor-detail-top::after {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  bottom: -175px;
+  left: -90px;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+ BREADCRUMB
+========================================================= */
+
+.mentor-detail-breadcrumb {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  font-size: 10px;
+
+  color: #91a0b5;
+}
+
+.mentor-detail-breadcrumb a {
+  color: #c3ccd9;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.mentor-detail-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.mentor-detail-breadcrumb span:last-child {
+  color: #718096;
+}
+
+
+/* =========================================================
+ HERO PROFILE
+========================================================= */
+
+.mentor-profile-header {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: auto minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 22px;
+
+  background:
+      linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.045),
+          rgba(255, 255, 255, 0.02)
+      );
+
+  box-shadow:
+      0 24px 50px rgba(0, 0, 0, 0.20);
+
+  backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+ AVATAR
+========================================================= */
+
+.mentor-large-avatar {
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e5e7eb;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+
+  flex-shrink: 0;
+}
+.mentor-large-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mentor-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+@media (max-width: 768px) {
+  .mentor-large-avatar {
+      width: 110px;
+      height: 110px;
+      min-width: 110px;
+  }
+
+  .mentor-profile-header {
+      gap: 18px;
+  }
+}
+/* =========================================================
+ HEADER INFO
+========================================================= */
+
+.mentor-header-info {
+  min-width: 0;
+}
+
+.mentor-name-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+.mentor-name-line h1 {
+  margin: 0;
+
+  font-size: 34px;
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+
+  color: #ffffff;
+}
+
+.mentor-name-line p {
+  margin: 6px 0 0;
+
+  font-size: 13px;
+
+  color: #98a6b9;
+}
+
+
+/* =========================================================
+ TYPE BADGE
+========================================================= */
+
+.detail-type {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+
+  white-space: nowrap;
+}
+
+.detail-type.free {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #d6dee9;
+}
+
+.detail-type.paid {
+  border: 1px solid rgba(255, 255, 255, 0.17);
+
+  background:
+      linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.12),
+          rgba(255, 255, 255, 0.05)
+      );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+ ACADEMIC INFO
+========================================================= */
+
+.mentor-academic-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 15px;
+
+  font-size: 13px;
+
+  color: #aab5c4;
+}
+
+
+/* =========================================================
+ EXPERIENCE
+========================================================= */
+
+.mentor-experience {
+  margin: 11px 0 0;
+
+  font-size: 13px;
+
+  color: #8f9db0;
+}
+
+
+/* =========================================================
+ RATING / STATS
+========================================================= */
+
+.mentor-rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px 22px;
+
+  margin-top: 17px;
+}
+
+.mentor-rating span {
+  font-size: 12px;
+
+  color: #98a6b9;
+}
+
+.mentor-rating span:first-child {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+ CONTENT
+========================================================= */
+
+.mentor-details-content {
+  padding-top: 26px;
+}
+
+.mentor-details-grid {
+  display: grid;
+
+  grid-template-columns:
+      minmax(0, 1fr)
+      330px;
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+ MAIN COLUMN
+========================================================= */
+
+.mentor-main-column {
+  min-width: 0;
+}
+
+
+/* =========================================================
+ DETAIL CARDS
+========================================================= */
+
+.mentor-detail-card {
+  position: relative;
+
+  margin-bottom: 18px;
+
+  padding: 27px;
+
+  overflow: hidden;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 18px;
+
+  background:
+      linear-gradient(
+          180deg,
+          #ffffff,
+          #fcfdff
+      );
+
+  box-shadow:
+      0 8px 24px rgba(15, 23, 42, 0.045);
+
+  transition:
+      transform 0.22s ease,
+      box-shadow 0.22s ease,
+      border-color 0.22s ease;
+}
+
+.mentor-detail-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d7dfe9;
+
+  box-shadow:
+      0 14px 32px rgba(15, 23, 42, 0.07);
+}
+
+
+/* accent line */
+
+.mentor-detail-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 25px;
+  left: 0;
+
+  width: 3px;
+  height: 30px;
+
+  border-radius: 0 8px 8px 0;
+
+  background:
+      linear-gradient(
+          180deg,
+          #111827,
+          #718096
+      );
+}
+
+
+/* =========================================================
+ LABEL
+========================================================= */
+
+.mentor-detail-card .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: #667085;
+}
+
+.mentor-detail-card .section-label::before {
+  content: "";
+
+  width: 18px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #111827;
+}
+
+
+/* =========================================================
+ CARD TITLE
+========================================================= */
+
+.mentor-detail-card h2 {
+  margin: 8px 0 13px;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  letter-spacing: -0.018em;
+
+  color: #101828;
+}
+
+
+/* =========================================================
+ BIO
+========================================================= */
+
+.mentor-full-bio {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  color: #667085;
+
+  white-space: pre-line;
+}
+
+
+/* =========================================================
+ SKILLS
+========================================================= */
+
+.mentor-detail-skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 16px;
+}
+
+.mentor-detail-skills span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 13px;
+
+  border: 1px solid #dce3eb;
+
+  border-radius: 999px;
+
+  background:
+      linear-gradient(
+          180deg,
+          #fafbfc,
+          #eef2f6
+      );
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+}
+
+.mentor-detail-skills span:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbd5e1;
+
+  background: #e9eef4;
+}
+
+
+/* =========================================================
+ WHAT YOU CAN LEARN
+========================================================= */
+
+.learning-grid {
+  display: grid;
+
+  grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 17px;
+}
+
+.learning-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 16px;
+
+  border: 1px solid #e7ecf1;
+
+  border-radius: 13px;
+
+  background:
+      linear-gradient(
+          180deg,
+          #fbfcfd,
+          #f7f9fb
+      );
+
+  transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+.learning-item:hover {
+  transform: translateY(-2px);
+
+  border-color: #d7e0e9;
+
+  background: #ffffff;
+
+  box-shadow:
+      0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+.learning-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e2e8ef;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  font-size: 18px;
+
+  box-shadow:
+      0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+.learning-item h3 {
+  margin: 1px 0 5px;
+
+  font-size: 14px;
+
+  color: #172033;
+}
+
+.learning-item p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+
+  color: #7a8697;
+}
+
+
+/* =========================================================
+ SOCIAL
+========================================================= */
+
+.mentor-social-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.mentor-social-links a {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 15px;
+
+  border: 1px solid #e5eaf0;
+
+  border-radius: 12px;
+
+  background: #fafbfd;
+
+  text-decoration: none;
+
+  transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+}
+
+.mentor-social-links a:hover {
+  transform: translateX(3px);
+
+  border-color: #d6dee8;
+
+  background: #ffffff;
+
+  box-shadow:
+      0 7px 16px rgba(15, 23, 42, 0.04);
+}
+
+.social-small-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.mentor-social-links a > div:nth-child(2) {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.mentor-social-links strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+
+  color: #172033;
+}
+
+.mentor-social-links span {
+  display: block;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: 12px;
+
+  color: #7b8797;
+}
+
+.mentor-social-links b {
+  font-size: 17px;
+
+  color: #667085;
+}
+
+
+/* =========================================================
+ SIDEBAR
+========================================================= */
+
+.mentor-detail-sidebar {
+  position: sticky;
+
+  top: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+ ACCESS CARD
+========================================================= */
+
+.mentor-access-card {
+  position: relative;
+
+  padding: 23px;
+
+  overflow: hidden;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 18px;
+
+  background:
+      radial-gradient(
+          circle at 100% 0%,
+          rgba(96, 165, 250, 0.13),
+          transparent 35%
+      ),
+      linear-gradient(
+          145deg,
+          #0f172a,
+          #111827
+      );
+
+  color: #ffffff;
+
+  box-shadow:
+      0 18px 34px rgba(15, 23, 42, 0.17);
+}
+
+.mentor-access-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -95px;
+  top: -100px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+ ACCESS CARD TOP
+========================================================= */
+
+.access-card-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.access-card-top .section-label {
+  color: #91a0b6;
+}
+
+.access-card-top .section-label::before {
+  background: #94a3b8;
+}
+
+.access-price {
+  font-size: 28px;
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+
+  color: #ffffff;
+
+  white-space: nowrap;
+}
+
+.access-price small {
+  font-size: 11px;
+  font-weight: 500;
+
+  color: #8d9aae;
+}
+
+
+/* =========================================================
+ ACCESS INFO
+========================================================= */
+
+.access-info {
+  position: relative;
+  z-index: 1;
+
+  padding: 18px 0;
+}
+
+.access-status {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.access-status > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.access-status strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 13px;
+
+  color: #ffffff;
+}
+
+.access-status p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  color: #93a0b2;
+}
+
+
+/* =========================================================
+ ACCESS BUTTON
+========================================================= */
+
+.mentor-access-button {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+  min-height: 46px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+}
+
+.mentor-access-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+      0 10px 22px rgba(0, 0, 0, 0.20);
+}
+
+.mentor-access-button.unlocked {
+  background:
+      linear-gradient(
+          135deg,
+          #ffffff,
+          #edf1f5
+      );
+}
+
+.mentor-access-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+ ACCESS NOTE
+========================================================= */
+
+.access-note {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 12px;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  color: #7f8b9e;
+}
+
+
+/* =========================================================
+ SIDEBAR STATS
+========================================================= */
+
+.mentor-sidebar-stats {
+  display: grid;
+
+  grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+  overflow: hidden;
+
+  border: 1px solid #e4e9ef;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+      0 7px 20px rgba(15, 23, 42, 0.04);
+}
+
+.mentor-sidebar-stats > div {
+  padding: 17px 8px;
+
+  text-align: center;
+
+  border-right: 1px solid #edf1f5;
+}
+
+.mentor-sidebar-stats > div:last-child {
+  border-right: none;
+}
+
+.mentor-sidebar-stats strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 17px;
+
+  color: #111827;
+}
+
+.mentor-sidebar-stats span {
+  font-size: 10px;
+
+  color: #8a94a6;
+}
+
+
+/* =========================================================
+ BACK LINK
+========================================================= */
+
+.back-mentor-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 43px;
+
+  padding: 10px 14px;
+
+  border: 1px solid #dce3ea;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #475467;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+}
+
+.back-mentor-link:hover {
+  transform: translateY(-1px);
+
+  border-color: #cbd5e1;
+
+  background: #fafbfd;
+}
+
+
+/* =========================================================
+ NOT FOUND
+========================================================= */
+
+.mentor-not-found {
+  min-height: 72vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background:
+      radial-gradient(
+          circle at 50% 20%,
+          rgba(59, 130, 246, 0.05),
+          transparent 35%
+      ),
+      #f7f9fc;
+}
+
+.mentor-not-found > div {
+  width: min(500px, 100%);
+
+  padding: 42px 30px;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+      0 12px 28px rgba(15, 23, 42, 0.05);
+}
+
+.mentor-not-found-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 18px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mentor-not-found h1 {
+  margin: 0 0 8px;
+
+  font-size: 27px;
+
+  color: #111827;
+}
+
+.mentor-not-found p {
+  margin: 0 0 20px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #667085;
+}
+
+.mentor-not-found a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 43px;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+ TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .mentor-details-page .container {
+      width: min(100% - 30px, 760px);
+  }
+
+  .mentor-details-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .mentor-detail-sidebar {
+      position: static;
+
+      display: grid;
+
+      grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+      align-items: start;
+  }
+
+  .mentor-access-card {
+      height: fit-content;
+  }
+
+  .mentor-sidebar-stats {
+      height: fit-content;
+  }
+
+  .back-mentor-link {
+      grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================================
+ MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .mentor-details-page .container {
+      width: min(100% - 22px, 650px);
+  }
+
+  .mentor-detail-top {
+      padding: 20px 0 26px;
+  }
+
+  .mentor-detail-breadcrumb {
+      margin-bottom: 15px;
+
+      font-size: 11px;
+  }
+
+  .mentor-profile-header {
+      grid-template-columns: 1fr;
+
+      justify-items: center;
+
+      text-align: center;
+
+      padding: 25px 18px;
+
+      border-radius: 17px;
+  }
+
+  .mentor-large-avatar {
+      width: 96px;
+      height: 96px;
+
+      font-size: 28px;
+  }
+
+  .mentor-header-info {
+      width: 100%;
+  }
+
+  .mentor-name-line {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .mentor-name-line h1 {
+      font-size: 28px;
+  }
+
+  .mentor-academic-info,
+  .mentor-rating {
+      justify-content: center;
+  }
+
+  .mentor-details-content {
+      padding-top: 18px;
+  }
+
+  .mentor-detail-card {
+      padding: 22px 18px;
+
+      border-radius: 15px;
+  }
+
+  .learning-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .mentor-detail-sidebar {
+      display: flex;
+  }
+}
+
+
+/* =========================================================
+ SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .mentor-details-page .container {
+      width: calc(100% - 18px);
+  }
+
+  .mentor-name-line h1 {
+      font-size: 25px;
+  }
+
+  .mentor-profile-header {
+      padding: 23px 15px;
+  }
+
+  .mentor-large-avatar {
+      width: 86px;
+      height: 86px;
+
+      font-size: 25px;
+  }
+
+  .mentor-rating {
+      gap: 8px 14px;
+  }
+
+  .mentor-rating span {
+      font-size: 11px;
+  }
+
+  .mentor-detail-card h2 {
+      font-size: 18px;
+  }
+
+  .learning-item {
+      padding: 14px;
+  }
+
+  .mentor-access-card {
+      padding: 20px 17px;
+  }
+
+  .access-price {
+      font-size: 24px;
+  }
+
+  .mentor-sidebar-stats strong {
+      font-size: 15px;
+  }
+
+  /* =========================================================
+   SIDEBAR SOCIAL LINKS
+========================================================= */
+
+.mentor-sidebar-social {
+  padding: 20px;
+
+  border: 1px solid #e4e9f0;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+      0 8px 22px rgba(15, 23, 42, 0.04);
+}
+
+.mentor-sidebar-social h3 {
+  margin: 7px 0 17px;
+
+  font-size: 18px;
+  color: #111827;
+}
+
+.mentor-sidebar-social .mentor-social-links {
+  margin-top: 0;
+}
+
+.mentor-sidebar-social .mentor-social-links a {
+  padding: 12px;
+
+  border-radius: 11px;
+}
+
+.mentor-sidebar-social .social-small-icon {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 9px;
+
+  font-size: 10px;
+}
+
+.mentor-sidebar-social .mentor-social-links strong {
+  font-size: 12px;
+}
+
+.mentor-sidebar-social .mentor-social-links span {
+  font-size: 11px;
+}
+
+.no-social-links {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #7b8797;
+}
+}

@@ -1,0 +1,800 @@
+
+/* =========================================================
+   B.TECH COLLEGE CONNECT — MENTORS
+   Clean college portal theme
+========================================================= */
+
+.mentors-page {
+  min-height: calc(100vh - 76px);
+  background: #f4f7fb;
+  color: #142039;
+}
+
+.mentors-header {
+  background: #0b1730;
+  color: #ffffff;
+}
+
+.mentors-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 18px;
+  color: #91a1bd;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mentors-breadcrumb a {
+  color: #d6dfef;
+  text-decoration: none;
+}
+
+.mentors-breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.mentors-breadcrumb span:last-child {
+  color: #90a0ba;
+}
+
+.mentors-header-content {
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.dashboard-eyebrow {
+  display: inline-block;
+  color: #9eafca;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1.7px;
+}
+
+.mentors-header-content h1 {
+  max-width: 650px;
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: clamp(35px, 5vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -1.8px;
+}
+
+
+
+.mentors-header-content p {
+  max-width: 600px;
+  margin-top: 11px;
+  color: #aebbd0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.mentor-header-stat {
+  min-width: 125px;
+  padding: 17px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.055);
+  text-align: center;
+}
+
+.mentor-header-stat strong {
+  display: block;
+  color: #ffffff;
+  font-size: 27px;
+}
+
+.mentor-header-stat span {
+  display: block;
+  margin-top: 2px;
+  color: #97a6be;
+  font-size: 9px;
+}
+
+.mentors-content {
+  padding-top: 25px;
+  padding-bottom: 70px;
+}
+
+.mentor-search-card {
+  padding: 19px;
+  border: 1px solid #dce3ee;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(18,38,73,.055);
+}
+
+.mentor-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 45px;
+  padding: 0 13px;
+  border: 1px solid #dce3ee;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.mentor-search-icon {
+  color: #8795a9;
+  font-size: 20px;
+}
+
+.mentor-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #142039;
+  font-size: 11px;
+}
+
+.mentor-search input::placeholder {
+  color: #a4afbf;
+}
+
+.clear-search {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 23px;
+  border: 0;
+  border-radius: 7px;
+  background: #e9eef5;
+  color: #6f7d92;
+  font-size: 15px;
+}
+
+.mentor-filter-group {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid #e9eef5;
+}
+
+.mentor-filter-group > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #71809a;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .8px;
+}
+
+.mentor-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.mentor-filter {
+  min-height: 31px;
+  padding: 0 11px;
+  border: 1px solid #dce3ee;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #68778d;
+  font-size: 9px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.mentor-filter:hover {
+  border-color: #b9c7d9;
+  color: #0b1730;
+}
+
+.mentor-filter.active {
+  border-color: #0b1730;
+  background: #0b1730;
+  color: #ffffff;
+}
+
+.mentors-results {
+  margin-top: 38px;
+}
+
+.mentors-results-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.section-label {
+  display: block;
+  color: #71809a;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1.45px;
+}
+
+.mentors-results-header h2 {
+  margin-top: 4px;
+  color: #0b1730;
+  font-size: 27px;
+  letter-spacing: -.8px;
+}
+
+.clear-all-filters {
+  min-height: 33px;
+  padding: 0 11px;
+  border: 1px solid #dce3ee;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #6d7b90;
+  font-size: 9px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.clear-all-filters:hover {
+  border-color: #0b1730;
+  color: #0b1730;
+}
+
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+/* ---------------- MENTOR CARD ---------------- */
+
+.mentor-page-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 447px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dce3ee;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(18,38,73,.07);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.mentor-page-card::before {
+  content: "";
+  height: 4px;
+  flex: 0 0 4px;
+  background: #0b1730;
+}
+
+.mentor-page-card:hover {
+  transform: translateY(-4px);
+  border-color: #c6d2e2;
+  box-shadow: 0 18px 40px rgba(10,23,48,.11);
+}
+
+.mentor-card-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px 21px 0;
+}
+
+.mentor-card-label {
+  color: #7a8aa1;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 1.5px;
+}
+
+.mentor-page-type {
+  min-height: 23px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px solid #dce3ee;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #0b1730;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .08em;
+}
+
+.mentor-page-type.free {
+  border-color: #d4eee4;
+  background: #eefaf5;
+  color: #087653;
+}
+
+.mentor-page-type.paid {
+  background: #f8fafc;
+  color: #0b1730;
+}
+
+.mentor-page-profile {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 27px 21px 20px;
+}
+
+.mentor-avatar-wrap {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+}
+
+.mentor-page-avatar {
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 5px solid #edf2f8;
+  border-radius: 50%;
+  background: #f3f6fa;
+  color: #0b1730;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.mentor-page-avatar-image {
+  object-fit: cover;
+  object-position: center;
+  box-shadow: inset 0 0 0 1px #dce5f0;
+}
+
+.mentor-page-profile-info {
+  min-width: 0;
+}
+
+.mentor-page-profile-info h3 {
+  margin: 0;
+  color: #0b1730;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -.35px;
+}
+
+.mentor-page-profile-info p {
+  margin-top: 5px;
+  color: #8b98ab;
+  font-size: 10px;
+}
+
+.mentor-page-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(80px, .7fr);
+  gap: 14px;
+  margin: 0 21px;
+  padding: 15px 0;
+  border-top: 1px solid #e7edf4;
+}
+
+.mentor-page-meta > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mentor-meta-label {
+  color: #7b8aa1;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 1.2px;
+}
+
+.mentor-page-meta strong {
+  overflow: hidden;
+  color: #1a2942;
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mentor-page-skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  padding: 0 21px;
+  margin-top: 4px;
+}
+
+.mentor-page-skills span {
+  min-height: 27px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid #dce5ef;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #41526c;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.mentor-page-skills small {
+  color: #96a2b2;
+  font-size: 9px;
+}
+
+.mentor-access {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding: 18px 21px 21px;
+  border-top: 1px solid #e7edf4;
+}
+
+.mentor-access-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #7b8aa1;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 1.25px;
+}
+
+.mentor-access-price {
+  color: #0b1730;
+  font-size: 24px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.mentor-access-price span {
+  color: #8d99aa;
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.mentor-chat-button {
+  min-height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 14px;
+  border-radius: 9px;
+  background: #0b1730;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mentor-chat-button:hover {
+  opacity: .92;
+}
+
+.mentor-view-button {
+  min-height: 39px;
+  border-radius: 9px;
+}
+
+.mentors-empty {
+  padding: 70px 20px;
+  border: 1px solid #dce3ee;
+  border-radius: 17px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.mentors-empty-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #eaf0ff;
+  color: #0b1730;
+}
+
+.mentors-empty h3 {
+  margin-top: 14px;
+  color: #0b1730;
+  font-size: 17px;
+}
+
+.mentors-empty p {
+  margin-top: 5px;
+  color: #9aa5b5;
+  font-size: 10px;
+}
+
+.mentors-empty button {
+  margin-top: 16px;
+  min-height: 35px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #0b1730;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.complaint-error {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fff1f2;
+  color: #b4232f;
+  font-size: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1000px) {
+  .mentors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .mentors-header-content {
+    min-height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 28px;
+    padding-bottom: 33px;
+  }
+
+  .mentor-header-stat {
+    min-width: auto;
+  }
+
+  .mentors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-page-card {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mentors-header-content h1 {
+    font-size: 34px;
+  }
+
+  .mentors-header-content p {
+    font-size: 12px;
+  }
+
+  .mentor-search-card {
+    padding: 16px;
+  }
+
+  .mentors-results-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mentor-page-profile {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .mentor-page-meta,
+  .mentor-page-skills {
+    margin-left: 17px;
+    margin-right: 17px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mentor-access {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+/* =========================================================
+   MENTORS HEADER — MATCH RESOURCES HEADER STYLE
+   Header only; mentor cards, filters and content remain unchanged.
+========================================================= */
+
+.mentors-header {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 36px;
+  background: #0b1730;
+  color: #fff;
+}
+
+.mentors-header::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  left: -170px;
+  top: -215px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mentors-header::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -170px;
+  top: -220px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mentors-breadcrumb {
+  position: relative;
+  z-index: 2;
+  padding-top: 17px;
+  margin-bottom: 13px;
+  color: #92a2bd;
+}
+
+.mentors-breadcrumb a {
+  color: #d6dfef;
+}
+
+.mentors-header-content {
+  position: relative;
+  z-index: 2;
+  min-height: 180px;
+  margin-top: 0;
+  padding: 26px 34px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.065),
+    rgba(255,255,255,.025)
+  );
+  box-shadow: 0 20px 42px rgba(4,15,35,.18);
+}
+
+.mentors-header-copy {
+  max-width: 700px;
+}
+
+.mentors-header-content .dashboard-eyebrow {
+  color: #9fb0ca;
+  font-size: 9px;
+  letter-spacing: 1.65px;
+}
+
+.mentors-header-content h1 {
+  max-width: 650px;
+  margin: 7px 0 0;
+  color: #fff;
+  font-size: clamp(34px, 4.6vw, 48px);
+  line-height: 1.04;
+  letter-spacing: -1.4px;
+}
+
+.mentors-header-content h1 span {
+  color: #70809b;
+}
+
+.mentors-header-content p {
+  max-width: 560px;
+  margin: 11px 0 0;
+  color: #aebbd0;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.mentor-header-stat {
+  min-width: 112px;
+  padding: 15px 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  background: #0b1730;
+}
+
+.mentor-header-stat strong {
+  color: #fff;
+  font-size: 27px;
+}
+
+.mentor-header-stat span {
+  color: #91a1ba;
+  font-size: 8px;
+}
+
+@media (max-width: 700px) {
+  .mentors-header {
+    padding-bottom: 28px;
+  }
+
+  .mentors-header-content {
+    min-height: auto;
+    padding: 23px 21px;
+    border-radius: 17px;
+  }
+
+  .mentors-header-content h1 {
+    font-size: 33px;
+  }
+
+  .mentor-header-stat {
+    min-width: auto;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mentors-breadcrumb {
+    padding-top: 13px;
+    margin-bottom: 10px;
+    font-size: 9px;
+  }
+
+  .mentors-header-content {
+    padding: 20px 17px;
+  }
+
+  .mentors-header-content h1 {
+    font-size: 29px;
+  }
+
+  .mentors-header-content p {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   ABOUT — RESTORED
+   Shows the mentor bio such as "Full stack developer"
+   without making the card too tall.
+========================================================= */
+
+.mentor-about {
+  margin: 16px 21px 0;
+  padding: 14px 0 0;
+  border-top: 1px solid #e7edf4;
+}
+
+.mentor-about-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7b8aa1;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 1.25px;
+}
+
+.mentor-about p {
+  margin: 0;
+  color: #718096;
+  font-size: 10px;
+  line-height: 1.55;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 500px) {
+  .mentor-about {
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+}
