@@ -5,7 +5,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import { loginUser } from "../api/AuthApi";
+import { loginUser } from "../api/authApi";
 import { useAuth } from "../hooks/useAuth";
 
 function Login() {
