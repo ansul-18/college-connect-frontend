@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -35,7 +36,7 @@ import StudentChatConversation from "./pages/student/StudentChatConversation";
 import PublicComplaints from "./pages/Complaints";
 
 // Mentor pages
-import MentorDashboard from "./pages/mentor/MentorDashboard";
+import MentorDashboard from "./pages/mentor/MentorDashboard"
 import MentorProfile from "./pages/mentor/MentorProfile";
 import MentorChats from "./pages/mentor/Mentorchats";
 import MentorChatConversation from "./pages/mentor/MentorChatConversation";
@@ -58,6 +59,22 @@ import CommunityUserProfile
 
 
 function App() {
+
+  useEffect(() => {
+    const warmupBackend = async () => {
+      try {
+        await fetch(
+          `${import.meta.env.VITE_API_BASE_URL}/api/warmup`
+        );
+
+        console.log("Backend warm-up started");
+      } catch (error) {
+        console.log("Backend warm-up request failed");
+      }
+    };
+
+    warmupBackend();
+  }, []);
   return (
     <BrowserRouter>
       <Navbar />
