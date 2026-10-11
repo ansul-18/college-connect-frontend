@@ -382,6 +382,15 @@ function Navbar() {
                                 <div className="profile-dropdown">
 
 
+{user?.role === "ADMIN" && (
+    <Link
+        to="/admin/dashboard"
+        onClick={() => setProfileOpen(false)}
+    >
+        Admin Dashboard
+    </Link>
+)}
+
                                 
 
                                     {user?.role !== "ADMIN" && (
