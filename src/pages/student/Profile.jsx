@@ -95,55 +95,30 @@ function Profile() {
     // =========================================================
     // FILL FORM
     // =========================================================
-    useEffect(() => {
-
-        if (profile) {
-
-          setFormData({
-            departmentId: profile.departmentId || "",
-            year: profile.year || "",
-        
-            title: profile.title || "",
-            experience: profile.experience || "",
-            company: profile.company || "",
-            designation: profile.designation || "",
-        
-            bio: profile.bio || "",
+    // =========================================================
+// FILL FORM WITH EXISTING STUDENT PROFILE
+// =========================================================
+useEffect(() => {
+    if (profile) {
+        setFormData({
+            name: profile.name || user?.name || "",
+            email: profile.email || user?.email || "",
+            mobile: profile.mobile || "",
+            rollNumber: profile.rollNumber || "",
+            departmentId:
+                profile.departmentId != null
+                    ? String(profile.departmentId)
+                    : "",
+            year:
+                profile.year != null
+                    ? String(profile.year)
+                    : "",
             profileImage: profile.profileImage || "",
-        
+            bio: profile.bio || "",
             github: profile.github || "",
             linkedin: profile.linkedin || "",
-        
-            mentorType: profile.mentorType || "FREE",
-            price: profile.price || "",
-        
-            skillsInput: profile.skills?.join(", ") || ""
         });
-
-            const getInitials = (name) => {
-              if (!name) {
-                  return "U";
-              }
-          
-              return name
-                  .trim()
-                  .split(/\s+/)
-                  .map((part) => part.charAt(0))
-                  .slice(0, 2)
-                  .join("")
-                  .toUpperCase();
-          };
-          
-        }
-
-
-        /*
-         * Profile doesn't exist.
-         *
-         * Auto-fill information
-         * from logged-in auth user.
-         */
-
+    } else {
         setFormData({
             name: user?.name || "",
             email: user?.email || "",
@@ -154,11 +129,10 @@ function Profile() {
             profileImage: "",
             bio: "",
             github: "",
-            linkedin: ""
+            linkedin: "",
         });
-
-    }, [profile, user]);
-
+    }
+}, [profile, user]);
 
     // =========================================================
     // INPUT CHANGE
