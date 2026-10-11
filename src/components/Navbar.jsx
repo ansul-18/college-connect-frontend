@@ -65,7 +65,7 @@ function Navbar() {
         switch (user?.role) {
 
             case "STUDENT":
-                return "/student/dashboard";
+                return "/";
 
             case "MENTOR":
                 return "/mentor/dashboard";
@@ -213,6 +213,14 @@ function Navbar() {
                                 Dashboard
                             </Link>
 
+                            {user?.role === "ADMIN" && (
+    <Link
+        to="/admin/dashboard"
+        onClick={() => setProfileOpen(false)}
+    >
+        Admin Dashboard
+    </Link>
+)}
 
                             {user?.role !== "ADMIN" && (
 

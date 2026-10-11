@@ -76,25 +76,29 @@ function Login() {
 
       login(userData, accessToken);
 
-      const role = userData?.role;
+      const role = String(userData?.role || "")
+  .replace(/^ROLE_/, "")
+  .toUpperCase();
 
-      if (location.state?.from?.pathname) {
-        navigate(
-          location.state.from.pathname,
-          { replace: true }
-        );
-        return;
-      }
+// Admin → Admin Dashboard
+if (role === "ADMIN" || role === "SUPER_ADMIN") {
+  navigate("/admin/dashboard", { replace: true });
+}
 
-      if (role === "ROLE_STUDENT") {
-        navigate("/student/dashboard");
-      } else if (role === "ROLE_MENTOR") {
-        navigate("/mentor/dashboard");
-      } else if (role === "ROLE_SUPER_ADMIN") {
-        navigate("/admin/dashboard");
-      } else {
-        navigate("/");
-      }
+// Student → Home Page
+else if (role === "STUDENT") {
+  navigate("/", { replace: true });
+}
+
+// Mentor → Mentor Dashboard
+else if (role === "MENTOR") {
+  navigate("/mentor/dashboard", { replace: true });
+}
+
+// Other roles → Home Page
+else {
+  navigate("/", { replace: true });
+}
 
     } catch (error) {
       console.error("Login failed:", error);
