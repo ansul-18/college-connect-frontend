@@ -178,6 +178,26 @@ function Register() {
                 />
               </div>
 
+              <div className="form-gruop">
+                <label htmlFor="role">
+                  Account type
+                </label>
+
+                <select name="role"
+                  id="role"
+                  value={formData.role}
+                  onChange={handleChange}
+                >
+                  <option value="STUDENT">
+                    student
+                  </option>
+
+                </select>
+
+                
+
+              </div>
+
               
               <div className="form-group">
                 <label htmlFor="register-password">
