@@ -1159,3 +1159,42 @@
   }
 
 }
+/* Mobile: Search → Filters → All Events */
+@media (max-width: 600px) {
+  .events-page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Make search and results participate in the same layout */
+  .events-main-column {
+    display: contents;
+  }
+
+  .events-search-card {
+    order: 1;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .events-filter-sidebar {
+    order: 2;
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .events-filter-panel {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .student-events-results {
+    order: 3;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+  }
+}

@@ -1653,3 +1653,130 @@
 
 }
 }
+
+/* =========================================
+   MOBILE COMMUNITY PAGE IMPROVEMENTS
+   ========================================= */
+
+   @media (max-width: 700px) {
+
+    /* Reduce hero/header card height */
+    .community-header {
+      padding-bottom: 12px;
+    }
+  
+    .community-hero-card {
+      min-height: unset;
+      margin-top: 8px;
+      padding: 18px 15px;
+      gap: 12px;
+      flex-direction: column;
+      align-items: stretch;
+      border-radius: 17px;
+    }
+  
+    .community-hero-left {
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .community-hero-icon {
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      border-width: 2px;
+      font-size: 19px;
+    }
+  
+    .community-hero-info h1 {
+      margin: 5px 0 0;
+      font-size: 25px;
+      line-height: 1.18;
+      letter-spacing: -0.6px;
+    }
+  
+    .community-hero-info p {
+      margin: 6px 0 0;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  
+    .community-hero-button {
+      width: 100%;
+      min-height: 37px;
+      padding: 8px 12px;
+    }
+  
+    /* Reorder the mobile content */
+    .community-layout {
+      display: flex !important;
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    /* Flatten the two columns only on mobile */
+    .community-main,
+    .community-sidebar {
+      display: contents;
+    }
+  
+    /* 1. Search */
+    .community-search-box {
+      order: 1;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    /* 2. Category filters */
+    .community-category-bar {
+      order: 2;
+      margin-top: 0;
+    }
+  
+    /* 3. Have a question? */
+    .community-sidebar > .sidebar-ask-card {
+      order: 3;
+      box-sizing: border-box;
+      margin: 0;
+    }
+  
+    /* 4. Popular tags (first sidebar section) */
+    .community-sidebar > .community-side-card:first-of-type {
+      order: 4;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 14px;
+    }
+  
+    .trending-tags {
+      margin-top: 10px;
+      gap: 6px;
+    }
+  
+    .trending-tag {
+      padding: 6px 8px;
+    }
+  
+    /* 5. Latest discussions heading */
+    .community-main > .community-result-header {
+      order: 5;
+      margin: 10px 0 4px;
+    }
+  
+    /* 6. Posts, loading, errors or empty state */
+    .community-main > .community-post-list,
+    .community-main > .community-empty,
+    .community-main > .page-loader,
+    .community-main > .page-error {
+      order: 6;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    /* 7. Community information stays below discussions */
+    .community-sidebar > .community-side-card:nth-of-type(2) {
+      order: 7;
+      box-sizing: border-box;
+    }
+  }
+  
