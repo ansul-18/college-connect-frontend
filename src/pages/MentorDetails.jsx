@@ -381,11 +381,7 @@ const handleChat = async () => {
       {mentor.experience || "Experience not added"}
     </p>
 
-    <div className="mentor-rating">
-      <span>★ {mentor.rating || "4.9"}</span>
-      <span>{mentor.sessions || 0} sessions</span>
-      <span>{mentor.students || 0} students mentored</span>
-    </div>
+  
   </div>
 
 </div>
@@ -872,52 +868,7 @@ const handleChat = async () => {
             </div>
 
 
-            {/* QUICK STATS */}
-
-            <div className="mentor-sidebar-stats">
-
-
-              <div>
-
-                <strong>
-                  {mentor.rating || "4.9"}
-                </strong>
-
-                <span>
-                  Rating
-                </span>
-
-              </div>
-
-
-              <div>
-
-                <strong>
-                  {mentor.sessions || 0}+
-                </strong>
-
-                <span>
-                  Sessions
-                </span>
-
-              </div>
-
-
-              <div>
-
-                <strong>
-                  {mentor.students || 0}+
-                </strong>
-
-                <span>
-                  Students
-                </span>
-
-              </div>
-
-
-            </div>
-
+            
 {/* =================================================
     PROFESSIONAL LINKS
 ================================================= */}

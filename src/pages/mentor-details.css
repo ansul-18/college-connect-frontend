@@ -470,7 +470,7 @@
 .mentor-detail-card .section-label::before {
   content: "";
 
-  width: 18px;
+  width: 0px;
   height: 2px;
 
   border-radius: 999px;
