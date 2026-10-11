@@ -389,7 +389,7 @@
 
   margin-bottom: 18px;
 
-  padding: 27px;
+  padding: 17px;
 
   overflow: hidden;
 
@@ -1429,4 +1429,184 @@
 
   color: #7b8797;
 }
+
+
 }
+
+/* =========================================
+   MOBILE: COMPACT MENTOR DETAIL LAYOUT
+   ========================================= */
+
+   @media (max-width: 720px) {
+
+    /* Less space around the whole page */
+    .mentor-details-page .container {
+      width: calc(100% - 24px);
+    }
+  
+    .mentor-details-content {
+      padding-top: 12px;
+    }
+  
+    /* Flatten wrappers so Access can move above About */
+    .mentor-details-grid {
+      display: flex !important;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .mentor-main-column,
+    .mentor-detail-sidebar {
+      display: contents !important;
+    }
+  
+    /* Payment / Mentor Access card first */
+    .mentor-access-card {
+      order: -1;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px !important;
+      border-radius: 14px;
+      margin: 0 0 4px;
+    }
+  
+    .access-card-top {
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 10px;
+    }
+  
+    .access-price {
+      font-size: 22px;
+    }
+  
+    .access-info {
+      padding: 10px 0;
+    }
+  
+    .access-status {
+      padding: 9px;
+      gap: 9px;
+    }
+  
+    .mentor-access-button {
+      min-height: 40px;
+      padding: 9px 12px;
+    }
+  
+    .access-note {
+      margin-top: 8px;
+    }
+  
+    /* About, Academic and other detail cards */
+    .mentor-detail-card {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px !important;
+      margin-bottom: 10px;
+      border-radius: 13px;
+    }
+  
+    .mentor-detail-card h2 {
+      margin: 5px 0 9px;
+      font-size: 18px;
+    }
+  
+    .mentor-full-bio {
+      font-size: 13px;
+      line-height: 1.65;
+    }
+  
+    .mentor-detail-skills {
+      gap: 6px;
+      margin-top: 10px;
+    }
+  
+    .mentor-detail-skills span {
+      padding: 6px 9px;
+      font-size: 11px;
+    }
+  
+    /* Smaller learning-topic cards */
+    .learning-grid {
+      gap: 8px;
+      margin-top: 10px;
+    }
+  
+    .learning-item {
+      padding: 10px;
+      gap: 9px;
+      border-radius: 10px;
+    }
+  
+    .learning-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 15px;
+    }
+  
+    .learning-item h3 {
+      font-size: 13px;
+    }
+  
+    .learning-item p {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  
+    /* Compact rating and sessions box */
+    .mentor-sidebar-stats {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border-radius: 13px;
+    }
+  
+    .mentor-sidebar-stats > div {
+      padding: 11px 5px;
+    }
+  
+    .mentor-sidebar-stats strong {
+      font-size: 15px;
+    }
+  
+    .mentor-sidebar-stats span {
+      font-size: 10px;
+    }
+  
+    /* Social links card matches other cards */
+    .mentor-sidebar-social {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px !important;
+      margin-bottom: 10px;
+      border-radius: 13px;
+    }
+  
+    .mentor-sidebar-social h3 {
+      margin: 5px 0 10px;
+      font-size: 17px;
+    }
+  
+    .mentor-sidebar-social .mentor-social-links {
+      gap: 8px;
+    }
+  
+    .mentor-sidebar-social .mentor-social-links a {
+      padding: 9px 10px;
+      gap: 9px;
+      border-radius: 10px;
+    }
+  
+    .mentor-sidebar-social .social-small-icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .back-mentor-link {
+      min-height: 39px;
+      padding: 9px 12px;
+      margin-bottom: 10px;
+    }
+  }
+  
