@@ -236,6 +236,41 @@ button {
   background: #111827;
 }
 
+/* Fix authenticated links in mobile navigation */
+@media (max-width: 768px) {
+  .nav-menu.active .mobile-user-menu {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .nav-menu.active .mobile-user-link {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    color: #1f2937;
+    text-decoration: none;
+  }
+
+  .nav-menu.active .mobile-logout {
+    display: block !important;
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 14px;
+    text-align: left;
+    color: #dc2626;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+
 /* =========================================================
    HERO
 ========================================================= */
@@ -1175,12 +1210,12 @@ button {
 @media (max-width: 600px) {
 
   .footer {
-    padding: 30px 0 16px;
+    padding: 13px 0 16px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 25px 20px;
+    gap: 17px 20px;
   }
 
   .footer-about {
@@ -1201,7 +1236,7 @@ button {
   }
 
   .footer-bottom {
-    margin-top: 22px;
+    margin-top: 15px;
     padding-top: 12px;
 
     flex-direction: column;
@@ -1403,7 +1438,7 @@ button {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 35px 20px;
+    gap: 17px 20px;
   }
 
   .footer-about {

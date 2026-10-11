@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 0px;
 }
 
 .dashboard-eyebrow {
@@ -719,7 +719,7 @@
 
 @media (max-width: 700px) {
   .mentors-header {
-    padding-bottom: 28px;
+    padding-bottom: 21px;
   }
 
   .mentors-header-content {

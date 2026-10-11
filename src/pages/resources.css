@@ -126,7 +126,7 @@
   align-items: center;
   justify-content: space-between;
 
-  gap: 35px;
+  gap: 27px;
 
   margin-top: 18px;
 
@@ -921,7 +921,7 @@
       align-items: flex-start;
       flex-direction: column;
 
-      padding: 28px 25px;
+      padding: 14px 21px;
   }
 
 

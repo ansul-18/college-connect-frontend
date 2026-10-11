@@ -684,7 +684,7 @@
 @media (max-width: 560px) {
 
   .announcements-hero {
-      padding-bottom: 35px;
+      padding-bottom: 22px;
   }
 
   .hero-copy h1 {
@@ -735,7 +735,7 @@
 .announcements-hero {
   position: relative;
   overflow: hidden;
-  padding: 18px 0 34px;
+  padding: 15px 0 34px;
   background: #0b1730;
   color: #fff;
 }
@@ -799,7 +799,7 @@
 
 .hero-stats {
   min-width: 100px;
-  padding: 14px 17px;
+  padding: 12px 17px;
   border: 1px solid rgba(255,255,255,.11);
   border-radius: 14px;
   background: rgba(255,255,255,.055);
