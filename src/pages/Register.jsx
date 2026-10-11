@@ -54,21 +54,49 @@ function Register() {
 
        alert("Account created successfully.");
 
-       if (response.role === "STUDENT") {
-           navigate("/student/dashboard");
-       } else if (response.role === "MENTOR_PENDING") {
-           navigate("/");
-       }
+       if (
+        response.role === "STUDENT" ||
+        response.role === "MENTOR" ||
+        response.role === "MENTOR_PENDING"
+    ) {
+        navigate("/");
+    }
 
-   } catch (error) {
+  
+} catch (error) {
+  console.error("Registration failed:", error);
 
-       console.error("Registration failed:", error);
+  const status = error?.response?.status;
+  const responseData = error?.response?.data;
 
-       alert(
-           error.response?.data?.message ||
-           "Registration failed"
-       );
-   }
+  const backendMessage =
+    typeof responseData === "string"
+      ? responseData
+      : responseData?.message || "";
+
+  const normalizedMessage = backendMessage.toLowerCase();
+
+  const duplicateEmail =
+    status === 409 ||
+    (
+      normalizedMessage.includes("email") &&
+      /already|exists|exist|registered|taken|duplicate/.test(
+        normalizedMessage
+      )
+    ) ||
+    /user already exists|email already registered/i.test(
+      normalizedMessage
+    );
+
+  if (duplicateEmail) {
+    alert("Email already registered. Please sign in instead.");
+  } else {
+    alert(
+      backendMessage || "Registration failed. Please try again."
+    );
+  }
+}
+
 };
 
   return (
@@ -102,24 +130,7 @@ function Register() {
               college's connected learning community.
             </p>
 
-            <div className="register-mini-stats">
-
-              <div>
-                <strong>2.5K+</strong>
-                <span>Students</span>
-              </div>
-
-              <div>
-                <strong>120+</strong>
-                <span>Mentors</span>
-              </div>
-
-              <div>
-                <strong>80+</strong>
-                <span>Events</span>
-              </div>
-
-            </div>
+            
 
           </div>
 
@@ -167,27 +178,7 @@ function Register() {
                 />
               </div>
 
-              <div className="form-group">
-                <label htmlFor="role">
-                  Account type
-                </label>
-
-                <select
-                  id="role"
-                  name="role"
-                  value={formData.role}
-                  onChange={handleChange}
-                >
-                  <option value="STUDENT">
-                    Student
-                  </option>
-
-                  <option value="MENTOR">
-                    Mentor
-                  </option>
-                </select>
-              </div>
-
+              
               <div className="form-group">
                 <label htmlFor="register-password">
                   Password

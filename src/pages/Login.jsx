@@ -100,24 +100,35 @@ else {
   navigate("/", { replace: true });
 }
 
-    } catch (error) {
-      console.error("Login failed:", error);
+    
+} catch (error) {
+  console.error("Login failed:", error);
 
-      const message =
-        error?.response?.data?.message ||
-        error?.response?.data ||
-        error?.message ||
-        "Login failed. Please check your credentials.";
+  const status = error?.response?.status;
+  const responseData = error?.response?.data;
 
-      setError(
-        typeof message === "string"
-          ? message
-          : "Login failed. Please try again."
-      );
+  const backendMessage =
+    typeof responseData === "string"
+      ? responseData
+      : responseData?.message || "";
 
-    } finally {
-      setSubmitting(false);
-    }
+  if (status === 401 || status === 403) {
+    setError("Incorrect email or password. Please try again.");
+  } else if (
+    /incorrect|invalid|wrong/i.test(backendMessage) &&
+    /password|credential|login/i.test(backendMessage)
+  ) {
+    setError("Incorrect email or password. Please try again.");
+  } else {
+    setError(
+      backendMessage ||
+      "Login failed. Please check your credentials."
+    );
+  }
+} finally {
+  setSubmitting(false);
+}
+
   };
 
   return (
