@@ -1,5 +1,5 @@
 /* =========================================================
-   B.TECH COLLEGE CONNECT — HOME
+   IET Connect — HOME
    Navy campus theme
 ========================================================= */
 
@@ -1195,7 +1195,7 @@
 
 
 /* =========================================================
-  B.TECH COLLEGE CONNECT — FINAL COLLEGE THEME
+  IET Connect — FINAL COLLEGE THEME
   Clean institutional UI: navy + white, no decorative AI-style effects
 ========================================================= */
 
@@ -3877,5 +3877,154 @@
    height: 88px;
    flex-basis: 88px;
  }
+
+
+/* =========================================
+   MOBILE HOME PAGE CARD DESIGN
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  /* Keep home sections compact */
+  .home-page .section {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .home-page .section-heading {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .home-page .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .home-page .section-heading p {
+    font-size: 13px;
+  }
+
+  .home-page .view-all {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* EVENTS: compact horizontal rectangle cards */
+  .home-page .events-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .home-page .event-card {
+    display: grid !important;
+    grid-template-columns: 100px minmax(0, 1fr);
+    height: 148px;
+    min-height: 148px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .home-page .event-card-image {
+    width: 100%;
+    height: 148px !important;
+    min-height: 148px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+  }
+
+  .home-page .event-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home-page .event-card-body {
+    min-width: 0;
+    padding: 9px 10px !important;
+    gap: 4px;
+    overflow: hidden;
+  }
+
+  .home-page .event-top {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .home-page .event-target,
+  .home-page .event-type {
+    font-size: 9px;
+    padding: 3px 5px;
+  }
+
+  .home-page .event-card-body h3 {
+    font-size: 14px;
+    line-height: 1.25;
+    margin: 2px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .home-page .event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 10px;
+    min-width: 0;
+  }
+
+  .home-page .event-meta-item {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .home-page .event-meta-item b {
+    display: none;
+  }
+
+  .home-page .event-card-footer {
+    margin-top: auto;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  /* QUESTIONS: show at most 3 on mobile */
+  .home-page .questions-list > .question-card:nth-child(n + 4) {
+    display: none !important;
+  }
+
+  /* Compact question and announcement cards */
+  .home-page .question-card,
+  .home-page .announcement-card {
+    padding: 12px !important;
+    gap: 10px;
+  }
+
+  .home-page .question-card h3,
+  .home-page .announcement-card h3 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .home-page .question-card p,
+  .home-page .announcement-card p {
+    font-size: 12px;
+  }
+
+  /* Keep mentor cards aligned in one mobile column */
+  .home-page .mentor-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .home-page .mentor-card-premium {
+    padding: 14px !important;
+  }
+}
+
 }
 
