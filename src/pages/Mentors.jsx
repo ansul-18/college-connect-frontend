@@ -261,13 +261,12 @@ const resolveProfileImage = (value) => {
                </span>
 
                <h1>
-                 Learn from people
-                 <span>{" "}who've done it.</span>
+               Learn. Grow.
+                 <span>{" "}Get mentored.</span>
                </h1>
 
                <p>
-                 Connect with experienced mentors, learn practical skills
-                 and get career guidance.
+               Get practical skills and career guidance from experienced mentors.
                </p>
              </div>
 
@@ -342,18 +341,15 @@ const resolveProfileImage = (value) => {
               </span>
 
               <h1>
-                Learn from people
+              Learn. Grow.
                 <span>
                   {" "}
-                  who've done it.
+                  Get mentored..
                 </span>
               </h1>
 
               <p>
-                Connect with experienced
-                mentors, learn practical
-                skills and get career
-                guidance.
+              Get practical skills and career guidance from experienced mentors.
               </p>
 
             </div>

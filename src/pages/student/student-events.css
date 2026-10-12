@@ -157,7 +157,7 @@
 
 .events-hero-kicker {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   color: #98a5bd;
   font-size: 11px;
   font-weight: 800;
@@ -175,7 +175,7 @@
 
 .events-hero-copy p {
   max-width: 590px;
-  margin: 15px 0 0;
+  margin: 9px 0 0;
   color: #aeb9cb;
   font-size: 14px;
   line-height: 1.75;
@@ -191,7 +191,7 @@
 }
 
 .events-count-card {
-  padding: 8px 17px;
+  padding: 3px 17px;
   border: 1px solid rgba(135, 150, 188, 0.18);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.045);
@@ -303,7 +303,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
 }
 
 .events-panel-kicker {
@@ -412,7 +412,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  padding-bottom: 14px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #edf0f4;
 }
 
@@ -443,7 +443,7 @@
 }
 
 .event-filter-group + .event-filter-group {
-  margin-top: 15px;
+  margin-top: 11px;
   border-top: 1px solid #edf0f4;
 }
 
@@ -1053,8 +1053,8 @@
   }
 
   .events-breadcrumb {
-    margin-bottom: 17px;
-    font-size: 9px;
+    margin-bottom: 9px;
+    font-size: 8px;
   }
 
   .events-hero-card {
@@ -1067,17 +1067,17 @@
   }
 
   .events-hero-copy p {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .events-search-card,
   .events-filter-panel {
-    padding: 17px;
+    padding: 9px;
     border-radius: 16px;
   }
 
   .events-search-box {
-    min-height: 52px;
+    min-height: 45px;
   }
 
   .events-filter-panel-heading {
@@ -1151,7 +1151,7 @@
   }
 
   .events-hero-card {
-    padding: 13px;
+    padding: 8px 13px 10px;
   }
 
   .filter-pill {

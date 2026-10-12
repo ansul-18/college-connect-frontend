@@ -407,8 +407,8 @@
 ========================================================= */
 
 .resource-filter-group {
-  margin-top: 15px;
-  padding-top: 15px;
+  margin-top: 10px;
+  padding-top: 11px;
 
   border-top: 1px solid #eef1f5;
 }
@@ -1094,7 +1094,7 @@
 }
 
 .resources-breadcrumb {
-  padding-top: 1px;
+  padding-top: 0px;
   color: #91a1bd;
 }
 
@@ -1154,7 +1154,7 @@
 .resources-stat {
   width: 118px;
   min-height: 105px;
-  padding: 16px;
+  padding: 5px;
   border: 0;
   border-radius: 15px;
   background: #0b1730;
@@ -1178,7 +1178,7 @@
 }
 
 .resources-filter-card {
-  padding: 19px;
+  padding: 11px;
   border: 1px solid #dce3ee;
   border-radius: 17px;
   background: #ffffff;
@@ -1445,7 +1445,7 @@
   }
 
   .resources-header-content {
-    padding: 22px 18px;
+    padding: 11px 16px;
   }
 
   .resources-header-content h1 {

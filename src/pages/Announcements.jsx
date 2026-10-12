@@ -383,7 +383,7 @@ function Announcements() {
 
                             <h1>
                                 Stay updated.
-                                <br />
+                                
                                 <span>
                                     Stay informed.
                                 </span>
