@@ -1412,9 +1412,9 @@
  align-items: center;
  justify-content: space-between;
  gap: 10px;
- padding: 15px 18px 0;
+ padding: 1px 18px 0;
  color: #8ea0bc;
- font-size: 8px;
+ font-size: 9px;
  font-weight: 850;
  letter-spacing: 0.11em;
 }
@@ -2345,7 +2345,7 @@
  display: flex;
  align-items: center;
  gap: 14px;
- margin-top: 22px;
+ margin-top: 1px;
 }
 
 .home-page .mentor-card-premium .mentor-photo-wrap {
@@ -2438,7 +2438,7 @@
  display: block;
  margin-bottom: 5px;
  color: #8292ae;
- font-size: 7px;
+ font-size: 8px;
  font-weight: 850;
  letter-spacing: 0.12em;
 }
@@ -2672,7 +2672,7 @@
  display: flex;
  align-items: center;
  gap: 16px;
- padding: 16px 18px 0;
+ padding: 1px 18px 0;
 }
 
 .home-page .mentor-card-premium .mentor-photo-wrap {
@@ -2722,7 +2722,7 @@
 
 .home-page .mentor-card-premium .mentor-detail-row strong {
  color: #eef4fd !important;
- font-size: 10px;
+ font-size: 12px;
  line-height: 1.45;
 }
 
@@ -2731,7 +2731,7 @@
 }
 
 .home-page .mentor-card-premium .mentor-skills-block {
- padding: 14px 18px 0;
+ padding: 1px 18px 0;
 }
 
 .home-page .mentor-card-premium .skill-list {
@@ -3681,7 +3681,7 @@
 
 @media (max-width: 520px) {
  .home-page .mentor-card.mentor-card-premium {
-   padding: 18px !important;
+   padding: 14px !important;
  }
 
  .home-page .mentor-card-premium .mentor-detail-row {
@@ -3751,7 +3751,7 @@
  display: flex !important;
  align-items: center !important;
  justify-content: space-between !important;
- gap: 14px !important;
+ gap: 1px !important;
  background: #ffffff !important;
  border-top: 1px solid var(--home-border-soft) !important;
 }
@@ -3815,7 +3815,7 @@
 }
 
 .home-page .hero-grid {
- gap: 38px;
+ gap: 5px;
 }
 
 .home-page .mentor-photo-wrap {
@@ -3867,7 +3867,7 @@
 
 @media (max-width: 760px) {
  .home-page .hero-section {
-   padding: 34px 0 32px;
+   padding: 23px 0 3px;
  }
 }
 
@@ -4028,3 +4028,108 @@
 
 }
 
+
+/* MOBILE: Fix clipped Upcoming Event cards */
+@media (max-width: 640px) {
+
+  .home-page .events-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .home-page .events-grid .event-card {
+    display: grid !important;
+    grid-template-columns: 82px minmax(0, 1fr);
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  /* Image occupies the left side */
+  .home-page .events-grid .event-card-image {
+    width: 100%;
+    height: auto !important;
+    min-height: 170px !important;
+    align-self: stretch;
+    overflow: hidden;
+  }
+
+  .home-page .events-grid .event-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Let the complete information determine card height */
+  .home-page .events-grid .event-card-body {
+    display: flex !important;
+    flex-direction: column;
+    min-width: 0;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 10px !important;
+    gap: 5px;
+    overflow: visible !important;
+  }
+
+  .home-page .events-grid .event-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .home-page .events-grid .event-target,
+  .home-page .events-grid .event-type {
+    min-height: 18px;
+    padding: 3px 5px;
+    font-size: 8px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .home-page .events-grid .event-card-body h3 {
+    display: -webkit-box;
+    margin: 3px 0;
+    font-size: 14px;
+    line-height: 1.3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .home-page .events-grid .event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 3px;
+    min-width: 0;
+  }
+
+  .home-page .events-grid .event-meta-item {
+    display: block;
+    min-width: 0;
+    padding: 6px 7px;
+    font-size: 10px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .home-page .events-grid .event-meta-item b {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 7px;
+  }
+
+  .home-page .events-grid .event-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 9px;
+  }
+}

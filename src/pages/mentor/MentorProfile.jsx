@@ -789,12 +789,10 @@ function MentorProfile() {
                         <section className="mentor-form-card">
 
                             <span className="section-label">
-                                PROFESSIONAL
+                            PROFESSIONAL INFORMATION
                             </span>
 
-                            <h2>
-                                Professional information
-                            </h2>
+                        
 
 
                             <div className="mentor-form-grid">
@@ -1375,9 +1373,7 @@ return (
                           EXPERTISE
                       </span>
 
-                      <h2>
-                          Skills & expertise
-                      </h2>
+                      
 
                       {profile.skills &&
                       profile.skills.length > 0 ? (
@@ -1415,12 +1411,10 @@ return (
                   <section className="mentor-profile-card">
 
                       <span className="section-label">
-                          PROFESSIONAL
+                      PROFESSIONAL INFORMATION
                       </span>
 
-                      <h2>
-                          Professional information
-                      </h2>
+                    
 
 
                       <div className="mentor-info-grid">

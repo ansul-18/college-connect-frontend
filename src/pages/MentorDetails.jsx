@@ -377,9 +377,7 @@ const handleChat = async () => {
       )}
     </div>
 
-    <p className="mentor-experience">
-      {mentor.experience || "Experience not added"}
-    </p>
+    
 
   
   </div>

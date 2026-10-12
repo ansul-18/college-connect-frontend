@@ -1198,3 +1198,79 @@
     margin-top: 4px;
   }
 }
+
+/* Mobile event card: details aligned at top-right */
+@media (max-width: 600px) {
+
+  .student-event-item {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    align-items: start;
+    gap: 10px 12px;
+    padding: 12px;
+  }
+
+  /* Date stays at the top-left */
+  .student-event-item .event-item-date {
+    grid-column: 1;
+    grid-row: 1;
+    width: 54px;
+    height: 56px;
+  }
+
+  /* Category, title, time and venue at the top-right */
+  .student-event-item .event-item-content {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .student-event-item .event-item-content h3 {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .student-event-item .event-item-tags {
+    gap: 4px;
+  }
+
+  .student-event-item .event-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 8px;
+    margin-top: 6px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  /* Event image below the top row */
+  .student-event-item .event-item-image {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    height: 125px;
+    margin: 0;
+  }
+
+  /* Action buttons at the bottom */
+  .student-event-item .event-item-action {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .student-event-item .register-event-button {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .student-event-item .event-details-link {
+    flex: 0 0 95px;
+  }
+}

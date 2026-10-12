@@ -1876,7 +1876,7 @@ button {
 
   color: #9ca3af;
 
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .auth-switch a {
@@ -2275,7 +2275,7 @@ button {
 .pay-mentor-btn,
 .chat-btn {
   border: none;
-  padding: 12px 24px;
+  padding: 12px 138px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 15px;
