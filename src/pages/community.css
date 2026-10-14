@@ -1781,7 +1781,6 @@
   }
   
 /* Mobile community post card layout */
-@media (max-width: 600px) {
   .community-post-card {
     display: flex !important;
     flex-direction: column;
@@ -1867,4 +1866,4 @@
   .community-post-stats span {
     font-size: 10px;
   }
-}
+

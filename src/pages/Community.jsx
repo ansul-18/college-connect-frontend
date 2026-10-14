@@ -1206,72 +1206,7 @@ function Community() {
             </section>
 
 
-            {/* INFO */}
-
-            <section className="community-side-card">
-
-              <span className="section-label">
-                COMMUNITY
-              </span>
-
-
-              <h3>
-                Help someone today.
-              </h3>
-
-
-              <p>
-                Your answer might solve
-                someone else's biggest
-                problem.
-              </p>
-
-
-              <div className="community-info-stats">
-
-                <div>
-
-                  <strong>
-                    {posts.length}
-                  </strong>
-
-                  <span>
-                    Questions
-                  </span>
-
-                </div>
-
-
-                <div>
-
-                  <strong>
-                    {posts.reduce(
-                      (
-                        total,
-                        post
-                      ) =>
-                        total +
-                        Number(
-                          post?.answerCount ||
-                          post?.answers ||
-                          0
-                        ),
-                      0
-                    )}
-                  </strong>
-
-                  <span>
-                    Answers
-                  </span>
-
-                </div>
-
-              </div>
-
-            </section>
-
-
-        
+            
           </aside>
 
         </div>
