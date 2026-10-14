@@ -1785,7 +1785,7 @@
     display: flex !important;
     flex-direction: column;
     position: relative;
-    gap: 12px;
+    gap: 25px;
     padding: 12px !important;
   }
 

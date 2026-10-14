@@ -248,7 +248,7 @@
 ========================================================= */
 
 .community-main-post {
-  padding: 32px;
+  padding: 15px;
 }
 
 
@@ -1399,7 +1399,8 @@
 .composer-help-text {
   margin: 14px 0;
 
-  font-size: 13px;
+
+  font-size: 10px;
   line-height: 1.5;
 
   color: #8791a3;
@@ -1520,7 +1521,7 @@
 }
 
 .community-side-composer {
-  height: 283px;
+  height: 380px;
 
     padding: 24px;
 
@@ -1598,7 +1599,7 @@
 .composer-help-text {
     margin: 14px 0;
 
-    font-size: 13px;
+    font-size: 10px;
     line-height: 1.5;
 
     color: #8791a3;
@@ -1727,6 +1728,7 @@
 .community-cancel-reply {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   margin: 0 0 13px;
   padding: 0;
   border: 0;
