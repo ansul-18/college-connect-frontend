@@ -384,49 +384,13 @@ function EventDetails() {
                                     ABOUT THE EVENT
                                 </span>
 
-                                <h2>About this event</h2>
-
                                 <p className="event-description">
                                     {event.description ||
                                         "No description available for this event."}
                                 </p>
                             </section>
 
-                            <section className="event-content-card">
-                                <span className="event-section-label">
-                                    EVENT INFORMATION
-                                </span>
-
-                                <h2>Event details</h2>
-
-                                <div className="event-information-grid">
-
-                                    <EventInfo
-                                        icon="📅"
-                                        label="Date"
-                                        value={formattedDate}
-                                    />
-
-                                    <EventInfo
-                                        icon="🕐"
-                                        label="Time"
-                                        value={formattedTime}
-                                    />
-
-                                    <EventInfo
-                                        icon="📍"
-                                        label="Venue"
-                                        value={event.venue || "To be announced"}
-                                    />
-
-                                    <EventInfo
-                                        icon="🏫"
-                                        label="Department"
-                                        value={department}
-                                    />
-
-                                </div>
-                            </section>
+                            
 
                             {event.registrationRequired && (
                                 <section className="event-content-card">
