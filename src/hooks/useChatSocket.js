@@ -11,7 +11,7 @@ import {
 
 
 const WS_BASE_URL =
-   "wss://ietconnect.duckdns.org";
+   "ws://localhost:8080";
 
 
 const useChatSocket = ({
@@ -252,4 +252,5 @@ const useChatSocket = ({
 };
 
 
-export default useChatSocket;
+export default useChatSocket
+

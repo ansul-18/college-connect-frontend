@@ -1,7 +1,7 @@
 import React from "react";
 import "./messageList.css";
 
-const CHAT_SERVICE_URL = "http://localhost:8087";
+const CHAT_SERVICE_URL = "https://ietconnect.duckdns.org";
 
 const MessageList = ({
     messages = [],
