@@ -94,3 +94,64 @@
    cursor: pointer;
    color: #64748b;
 }
+
+/* Responsive attachment preview */
+.selected-file {
+   width: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+   gap: 8px;
+}
+
+.selected-file-info {
+   flex: 1;
+   min-width: 0;
+   overflow: hidden;
+}
+
+.selected-file-name {
+   min-width: 0;
+   overflow-wrap: anywhere;
+   word-break: break-word;
+}
+
+.remove-file-btn {
+   flex-shrink: 0;
+}
+
+/* Keep attachment, caption and send button in place */
+.message-input-row {
+   width: 100%;
+   min-width: 0;
+   box-sizing: border-box;
+}
+
+.message-input {
+   min-width: 0;
+   box-sizing: border-box;
+   flex: 1 1 auto;
+}
+
+.attachment-btn,
+.send-btn {
+   flex: 0 0 42px;
+}
+
+@media (max-width: 480px) {
+   .message-input-container {
+      padding: 10px 12px;
+   }
+
+   .message-input-row {
+      gap: 8px;
+   }
+
+   .message-input {
+      padding: 0 14px;
+   }
+
+   .selected-file {
+      padding: 8px;
+   }
+}
+
