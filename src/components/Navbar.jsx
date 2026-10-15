@@ -210,7 +210,6 @@ function Navbar() {
                                     setMenuOpen(false)
                                 }
                             >
-                                Dashboard
                             </Link>
 
                             {user?.role === "ADMIN" && (
