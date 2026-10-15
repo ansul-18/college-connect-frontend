@@ -10,8 +10,7 @@ import {
 } from "react";
 
 
-const WS_BASE_URL =
-   "ws://localhost:8080";
+const WS_BASE_URL = "wss://ietconnect.duckdns.org";
 
 
 const useChatSocket = ({
