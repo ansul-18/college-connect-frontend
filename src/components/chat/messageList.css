@@ -44,16 +44,18 @@
    margin-bottom: 6px;
 }
 
+
 .message-image {
    display: block;
-   max-width: 320px;
-   max-height: 300px;
-   width: auto;
+   width: 100%;
+   max-width: min(320px, 100%);
    height: auto;
+   max-height: 400px;
+   object-fit: contain;
    border-radius: 10px;
-   object-fit: cover;
    cursor: pointer;
 }
+
 
 /* DOCUMENT */
 
