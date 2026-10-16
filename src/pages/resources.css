@@ -1274,7 +1274,7 @@
 }
 
 .resource-card-top {
-  padding: 19px 19px 0;
+  padding: 10px 19px 0;
   align-items: center;
 }
 
@@ -1300,7 +1300,7 @@
 
 .resource-card-body {
   padding: 0 19px;
-  margin-top: 17px;
+  margin-top: 6px;
 }
 
 .resource-card-body h3 {
@@ -1453,6 +1453,6 @@
   }
 
   .resource-page-card {
-    min-height: 350px;
+    min-height: 330px;
   }
 }

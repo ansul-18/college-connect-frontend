@@ -473,35 +473,7 @@ function Resources() {
 
                   </div>
 
-                  <div className="resource-card-meta">
-
-                    <div>
-
-                      <span>
-                        Size
-                      </span>
-
-                      <strong>
-                        {resource.size ||
-                          "N/A"}
-                      </strong>
-
-                    </div>
-
-                    <div>
-
-                      <span>
-                        Uploaded
-                      </span>
-
-                      <strong>
-                        {resource.uploadedAt ||
-                          "Recently"}
-                      </strong>
-
-                    </div>
-
-                  </div>
+            
 
                   <div className="resource-card-footer">
 
