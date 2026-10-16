@@ -20,6 +20,7 @@ function Login() {
   });
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showContactCard, setShowContactCard] = useState(false);
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
@@ -240,11 +241,12 @@ else {
                   </label>
 
                   <button
-                    type="button"
-                    className="forgot-btn"
-                  >
-                    Forgot password?
-                  </button>
+  type="button"
+  className="forgot-btn"
+  onClick={() => setShowContactCard(true)}
+>
+  Forgot password?
+</button>
                 </div>
 
                 <div className="password-wrapper">
@@ -306,9 +308,89 @@ else {
 
         </div>
 
+        </div>
+
+{showContactCard && (
+  <div
+    style={{
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0, 0, 0, 0.55)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 9999,
+      padding: "20px",
+    }}
+    onClick={() => setShowContactCard(false)}
+  >
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-card-title"
+      style={{
+        background: "#ffffff",
+        color: "#1f2937",
+        padding: "28px",
+        borderRadius: "18px",
+        width: "100%",
+        maxWidth: "380px",
+        textAlign: "center",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
+      }}
+      onClick={(event) => event.stopPropagation()}
+    >
+      <div style={{ fontSize: "36px", marginBottom: "12px" }}>
+        🔐
       </div>
+
+      <h2 id="contact-card-title">
+        Forgot Password?
+      </h2>
+
+      <p style={{ color: "#6b7280", lineHeight: 1.6 }}>
+        Please contact the administrator for help resetting
+        your password.
+      </p>
+
+      <div
+        style={{
+          background: "#f3f4f6",
+          borderRadius: "12px",
+          padding: "16px",
+          margin: "20px 0",
+        }}
+      >
+        <h3 style={{ margin: "0 0 8px" }}>
+          Ansul Verma
+        </h3>
+
+        <p style={{ margin: 0 }}>
+          📞 8146557238
+        </p>
+      </div>
+
+      <button
+        type="button"
+        onClick={() => setShowContactCard(false)}
+        style={{
+          width: "100%",
+          padding: "12px",
+          border: "none",
+          borderRadius: "10px",
+          background: "#2563eb",
+          color: "#ffffff",
+          fontWeight: 600,
+          cursor: "pointer",
+        }}
+      >
+        Close
+      </button>
     </div>
-  );
+  </div>
+)}
+</div>
+);
 }
 
 export default Login;

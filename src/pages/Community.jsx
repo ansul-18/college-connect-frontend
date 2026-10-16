@@ -845,6 +845,7 @@ function Community() {
 
 
                       const department =
+              
                         student?.departmentName ||
                         post?.authorDepartmentName ||
                         post?.departmentName ||

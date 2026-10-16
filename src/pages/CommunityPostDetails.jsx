@@ -1073,11 +1073,7 @@ function CommunityPostDetails() {
                                 disabled={submittingAnswer}
                             />
 
-                            <p className="composer-help-text">
-                                Help another student understand
-                                the problem.
-                            </p>
-
+                        
                             <button
                                 type="submit"
                                 disabled={

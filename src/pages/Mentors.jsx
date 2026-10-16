@@ -612,7 +612,7 @@ const resolveProfileImage = (value) => {
                     >
                       <div className="mentor-card-label-row">
                         <span className="mentor-card-label">
-                          COLLEGE MENTOR
+                          MENTOR
                         </span>
 
                         <span

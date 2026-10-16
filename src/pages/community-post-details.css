@@ -2375,9 +2375,7 @@ body {
 
 /* The name is now in the QUESTION row, so the lower author row
    shows only profile context and posting time. */
-.community-author-info strong {
-  display: none;
-}
+
 
 .community-author-info span {
   margin-top: 0;

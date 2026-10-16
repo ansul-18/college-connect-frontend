@@ -436,9 +436,7 @@ const handleChat = async () => {
                 EXPERTISE
               </span>
 
-              <h2>
-                Skills & expertise
-              </h2>
+            
 
 
               <div className="mentor-detail-skills">
@@ -474,12 +472,10 @@ const handleChat = async () => {
 <section className="mentor-detail-card">
 
     <span className="section-label">
-        PROFESSIONAL
+        PROFESSIONAL INFORMATION
     </span>
 
-    <h2>
-        Professional information
-    </h2>
+
 
     <div className="mentor-info-grid">
 

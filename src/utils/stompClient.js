@@ -19,8 +19,7 @@ export const connectChatSocket = ({
     reconnectDelay: 5000,
 
     debug: (message) => {
-      console.log("[STOMP]", message);
-    },
+     },
 
     onConnect: () => {
       console.log("WebSocket connected");
