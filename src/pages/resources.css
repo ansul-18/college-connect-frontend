@@ -1249,7 +1249,7 @@
 .resource-page-card {
   position: relative;
   overflow: hidden;
-  min-height: 365px;
+  min-height: 245px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -1360,7 +1360,7 @@
 
 .resource-card-footer {
   margin-top: auto;
-  padding: 15px 19px 18px;
+  padding: 9px 19px 18px;
   border-top: 1px solid #e7edf4;
 }
 
@@ -1453,6 +1453,6 @@
   }
 
   .resource-page-card {
-    min-height: 330px;
+    min-height: 260px;
   }
 }
