@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useAuth } from "../../hooks/useAuth";
+
+import { useNavigate } from "react-router-dom";
 
 import {
     createMentorPaymentOrder,
@@ -12,7 +15,9 @@ const MentorPaymentButton = ({
     mentor,
     onPaymentSuccess
 }) => {
+    const { user, token } = useAuth();
 
+    const navigate = useNavigate();
     const [loading, setLoading] =
         useState(false);
 
@@ -20,12 +25,17 @@ const MentorPaymentButton = ({
         useState("");
 
 
-    const handlePayment = async () => {
+        const handlePayment = async () => {
 
-        try {
-
-            setLoading(true);
-            setError("");
+            if (!user || !token) {
+                navigate("/login");
+                return;
+            }
+        
+            try {
+        
+                setLoading(true);
+                setError("");
 
             /*
              * Load Razorpay Checkout script

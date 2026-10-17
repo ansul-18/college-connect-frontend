@@ -21,8 +21,7 @@ function MentorDetails() {
 
   const navigate = useNavigate();
 
-  const { user } = useAuth();
-
+  const { user, token } = useAuth();
 
   const [mentor, setMentor] = useState(null);
 
@@ -178,6 +177,13 @@ const handleChat = async () => {
    * after successful payment.
    */
   const handlePaymentSuccess = (access) => {
+
+    if (!user || !token) {
+      setError("Please log in to purchase mentor access.");
+      return;
+    }
+    
+
     if (access?.chatAllowed === true) {
       setChatAllowed(true);
       return;
